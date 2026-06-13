@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 
 <head>
@@ -17,140 +16,158 @@ padding:0;
 box-sizing:border-box;
 }
 
-body{
-font-family:"Yu Gothic",sans-serif;
-background:#0d0d0d;
-color:white;
+html{
+scroll-behavior:smooth;
 }
 
-.hero{
+body{
+background:#050505;
+color:white;
+font-family:"Yu Gothic",sans-serif;
+}
 
-height:100vh;
+.hero-image{
+
+height:45vh;
 
 background:
 linear-gradient(
-rgba(0,0,0,.55),
-rgba(0,0,0,.75)
+rgba(0,0,0,.35),
+rgba(0,0,0,.65)
 ),
 url("hero.jpg");
 
 background-size:cover;
 background-position:center;
 
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-
-padding:20px;
-
 }
 
-.hero-content{
-max-width:1000px;
+.hero{
+
+padding:120px 20px 100px;
+
+text-align:center;
 }
 
 .logo{
 
-width:500px;
-max-width:90%;
+width:220px;
 
-margin-bottom:40px;
+margin-bottom:60px;
+
+opacity:.95;
 
 }
 
 .hero h1{
 
-font-size:72px;
-line-height:1.2;
+font-size:90px;
 
-margin-bottom:30px;
+font-weight:700;
+
+letter-spacing:10px;
+
+line-height:1.1;
+
+}
+
+.hero h2{
+
+font-size:70px;
+
+font-weight:300;
+
+letter-spacing:12px;
+
+margin-bottom:40px;
 
 }
 
 .catch{
 
-font-size:32px;
-margin-bottom:40px;
-font-weight:300;
+font-size:30px;
+
+color:#d0d0d0;
+
+margin-bottom:50px;
 
 }
 
 .philosophy{
 
-font-size:24px;
+font-size:22px;
+
 line-height:2;
 
-margin-bottom:50px;
+color:#bdbdbd;
+
+margin-bottom:60px;
 
 }
 
-.button{
+.enter-btn{
 
 display:inline-block;
 
-padding:25px 80px;
+padding:18px 70px;
 
-font-size:24px;
+border:1px solid rgba(255,255,255,.4);
 
-background:white;
-color:black;
+color:white;
 
 text-decoration:none;
 
-border-radius:10px;
+letter-spacing:4px;
 
-font-weight:bold;
+font-size:16px;
 
 transition:.3s;
 
 }
 
-.button:hover{
+.enter-btn:hover{
 
-background:#d40000;
-color:white;
+background:white;
+
+color:black;
 
 }
 
 .menu{
 
-padding:100px 30px;
-
-max-width:1400px;
+max-width:900px;
 
 margin:auto;
+
+padding:120px 30px;
 
 }
 
 .menu-title{
 
+font-size:18px;
+
+letter-spacing:8px;
+
 text-align:center;
 
-font-size:48px;
+margin-bottom:80px;
 
-margin-bottom:50px;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
+color:#888;
 
 }
 
 .card{
 
-background:#1b1b1b;
+display:block;
 
-padding:40px;
+text-decoration:none;
 
-border-radius:15px;
+color:white;
+
+padding:45px 0;
+
+border-bottom:1px solid rgba(255,255,255,.12);
 
 transition:.3s;
 
@@ -158,17 +175,31 @@ transition:.3s;
 
 .card:hover{
 
-transform:translateY(-8px);
+padding-left:20px;
 
-background:#252525;
+border-bottom:1px solid white;
+
+}
+
+.number{
+
+font-size:14px;
+
+letter-spacing:4px;
+
+color:#888;
+
+margin-bottom:10px;
 
 }
 
 .card h3{
 
-font-size:28px;
+font-size:42px;
 
-margin-bottom:15px;
+font-weight:600;
+
+margin-bottom:10px;
 
 }
 
@@ -176,24 +207,42 @@ margin-bottom:15px;
 
 font-size:18px;
 
-color:#ccc;
+color:#999;
 
 }
 
 footer{
 
+padding:100px 20px;
+
 text-align:center;
 
-padding:50px;
+color:#666;
 
-color:#888;
+border-top:1px solid rgba(255,255,255,.08);
+
+margin-top:100px;
 
 }
 
 @media(max-width:768px){
 
+.hero-image{
+height:30vh;
+}
+
+.logo{
+width:160px;
+}
+
 .hero h1{
-font-size:42px;
+font-size:48px;
+letter-spacing:4px;
+}
+
+.hero h2{
+font-size:38px;
+letter-spacing:6px;
 }
 
 .catch{
@@ -201,21 +250,11 @@ font-size:22px;
 }
 
 .philosophy{
-font-size:18px;
+font-size:16px;
 }
 
-.button{
-
-padding:20px 50px;
-
-font-size:20px;
-
-}
-
-.logo{
-
-width:300px;
-
+.card h3{
+font-size:28px;
 }
 
 }
@@ -226,24 +265,25 @@ width:300px;
 
 <body>
 
+<div class="hero-image"></div>
+
 <section class="hero">
 
-<div class="hero-content">
+<img src="ロゴ.png" class="logo">
 
-<img src="logo.png" class="logo">
+<h1>PADOCK GROUP</h1>
 
-<h1>
-PADOCK GROUP<br>
-ACADEMY
-</h1>
+<h2>ACADEMY</h2>
 
 <div class="catch">
+
 人を育て、感動を創る。
+
 </div>
 
 <div class="philosophy">
 
-<strong>四方良し</strong>
+四方良し
 
 <br><br>
 
@@ -255,61 +295,81 @@ ACADEMY
 
 </div>
 
-<a href="#menu" class="button">
+<a href="#menu" class="enter-btn">
 
-学習を始める
+ENTER
 
 </a>
-
-</div>
 
 </section>
 
 <section class="menu" id="menu">
 
-<h2 class="menu-title">
+<div class="menu-title">
 
-TRAINING MENU
+TRAINING PROGRAM
 
-</h2>
-
-<div class="grid">
-
-<a href="philosophy.html">
-
-<a href="philosophy.html">
-<div class="card">
-<h3>経営理念</h3>
-<p>理念と行動指針を学ぶ</p>
 </div>
+
+<a href="philosophy.html" class="card">
+
+<div class="number">01</div>
+
+<h3>PHILOSOPHY</h3>
+
+<p>経営理念</p>
+
 </a>
 
-<div class="card">
-<h3>電話対応</h3>
-<p>電話応対の基礎を学ぶ</p>
-</div>
+<a href="#" class="card">
 
-<div class="card">
-<h3>コンシェルジュ</h3>
-<p>接客と商談を学ぶ</p>
-</div>
+<div class="number">02</div>
 
-<div class="card">
-<h3>テクニシャン</h3>
-<p>整備品質と安全を学ぶ</p>
-</div>
+<h3>PHONE SKILL</h3>
 
-<div class="card">
-<h3>車両知識</h3>
-<p>モデルと特徴を学ぶ</p>
-</div>
+<p>電話対応</p>
 
-<div class="card">
+</a>
+
+<a href="#" class="card">
+
+<div class="number">03</div>
+
+<h3>CONCIERGE</h3>
+
+<p>コンシェルジュ</p>
+
+</a>
+
+<a href="#" class="card">
+
+<div class="number">04</div>
+
+<h3>TECHNICIAN</h3>
+
+<p>テクニシャン</p>
+
+</a>
+
+<a href="#" class="card">
+
+<div class="number">05</div>
+
+<h3>PRODUCT KNOWLEDGE</h3>
+
+<p>車両知識</p>
+
+</a>
+
+<a href="#" class="card">
+
+<div class="number">06</div>
+
 <h3>FAQ</h3>
-<p>よくある質問を見る</p>
-</div>
 
-</div>
+<p>よくある質問</p>
+
+</a>
 
 </section>
 
@@ -320,4 +380,5 @@ PADOCK GROUP ACADEMY
 </footer>
 
 </body>
+
 </html>
