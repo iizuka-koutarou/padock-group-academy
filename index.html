@@ -1,88 +1,225 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>PADOCK GROUP ACADEMY</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    background:#0d0d0d;
-    color:white;
-    font-family:"Yu Gothic",sans-serif;
+font-family:"Yu Gothic",sans-serif;
+background:#0d0d0d;
+color:white;
 }
 
 .hero{
-    height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
-    url("hero.jpg");
-    background-size:cover;
-    background-position:center;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.75)
+),
+url("hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+padding:20px;
+
 }
 
 .hero-content{
-    max-width:800px;
-    padding:20px;
+max-width:1000px;
 }
 
 .logo{
-    width:250px;
-    margin-bottom:30px;
+
+width:500px;
+max-width:90%;
+
+margin-bottom:40px;
+
 }
 
-h1{
-    font-size:4rem;
-    margin-bottom:20px;
+.hero h1{
+
+font-size:72px;
+line-height:1.2;
+
+margin-bottom:30px;
+
 }
 
-.tagline{
-    font-size:1.5rem;
-    color:#dddddd;
+.catch{
+
+font-size:32px;
+margin-bottom:40px;
+font-weight:300;
+
 }
 
 .philosophy{
-    margin-top:40px;
-    line-height:2;
+
+font-size:24px;
+line-height:2;
+
+margin-bottom:50px;
+
 }
 
 .button{
-    display:inline-block;
-    margin-top:40px;
-    padding:15px 40px;
-    border:1px solid white;
-    color:white;
-    text-decoration:none;
+
+display:inline-block;
+
+padding:25px 80px;
+
+font-size:24px;
+
+background:white;
+color:black;
+
+text-decoration:none;
+
+border-radius:10px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.button:hover{
+
+background:#d40000;
+color:white;
+
 }
 
 .menu{
-    padding:80px 20px;
-    max-width:1200px;
-    margin:auto;
+
+padding:100px 30px;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+.menu-title{
+
+text-align:center;
+
+font-size:48px;
+
+margin-bottom:50px;
+
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
 }
 
 .card{
-    background:#1a1a1a;
-    padding:30px;
-    border-radius:12px;
+
+background:#1b1b1b;
+
+padding:40px;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+background:#252525;
+
 }
 
 .card h3{
-    margin-top:0;
+
+font-size:28px;
+
+margin-bottom:15px;
+
 }
+
+.card p{
+
+font-size:18px;
+
+color:#ccc;
+
+}
+
+footer{
+
+text-align:center;
+
+padding:50px;
+
+color:#888;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.catch{
+font-size:22px;
+}
+
+.philosophy{
+font-size:18px;
+}
+
+.button{
+
+padding:20px 50px;
+
+font-size:20px;
+
+}
+
+.logo{
+
+width:300px;
+
+}
+
+}
+
 </style>
 
 </head>
@@ -95,25 +232,33 @@ h1{
 
 <img src="logo.png" class="logo">
 
-<h1>PADOCK GROUP<br>ACADEMY</h1>
+<h1>
+PADOCK GROUP<br>
+ACADEMY
+</h1>
 
-<p class="tagline">
+<div class="catch">
 人を育て、感動を創る。
-</p>
+</div>
 
 <div class="philosophy">
 
-<h2>四方良し</h2>
+<strong>四方良し</strong>
 
-<p>
-お客様と地域に愛され、<br>
+<br><br>
+
+お客様と地域に愛され、
+
+<br>
+
 全社員の幸せを恒久的に実現する
-</p>
 
 </div>
 
 <a href="#menu" class="button">
+
 学習を始める
+
 </a>
 
 </div>
@@ -121,6 +266,12 @@ h1{
 </section>
 
 <section class="menu" id="menu">
+
+<h2 class="menu-title">
+
+TRAINING MENU
+
+</h2>
 
 <div class="grid">
 
@@ -146,7 +297,7 @@ h1{
 
 <div class="card">
 <h3>車両知識</h3>
-<p>車種や特徴を学ぶ</p>
+<p>モデルと特徴を学ぶ</p>
 </div>
 
 <div class="card">
@@ -157,6 +308,12 @@ h1{
 </div>
 
 </section>
+
+<footer>
+
+PADOCK GROUP ACADEMY
+
+</footer>
 
 </body>
 </html>
