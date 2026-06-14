@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KAWASAKI ACADEMY</title>
+<title>カワサキを知る</title>
 
 <style>
 
@@ -17,29 +16,21 @@ font-family:"Yu Gothic",sans-serif;
 }
 
 body{
-background:#050505;
-color:white;
-line-height:1.8;
-}
-
-section{
-padding:120px 10%;
-}
-
-h1,h2,h3{
-font-weight:700;
+background:#f7f7f7;
+color:#222;
+line-height:1.9;
 }
 
 .hero{
 
-height:100vh;
+height:80vh;
 
 background:
 linear-gradient(
-rgba(0,0,0,.5),
-rgba(0,0,0,.8)
+rgba(0,0,0,.25),
+rgba(0,0,0,.45)
 ),
-url("hero.jpg");
+url("yaizu.jpg");
 
 background-size:cover;
 background-position:center;
@@ -47,98 +38,72 @@ background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
+
 text-align:center;
-}
 
-.hero-content{
-
-max-width:900px;
+color:white;
 
 }
 
 .hero h1{
 
-font-size:90px;
-letter-spacing:10px;
+font-size:60px;
+
 margin-bottom:20px;
+
+font-weight:700;
 
 }
 
 .hero p{
 
-font-size:28px;
-color:#d0d0d0;
+font-size:24px;
 
 }
 
-.start-btn{
+.section{
 
-display:inline-block;
+max-width:1100px;
 
-margin-top:50px;
+margin:auto;
 
-padding:18px 50px;
-
-border:1px solid #00ff88;
-
-color:#00ff88;
-
-text-decoration:none;
-
-letter-spacing:4px;
-
-transition:.3s;
+padding:100px 30px;
 
 }
 
-.start-btn:hover{
+.section-title{
 
-background:#00ff88;
-
-color:black;
-
-}
-
-.title{
-
-font-size:50px;
+font-size:42px;
 
 margin-bottom:40px;
 
-color:#00ff88;
+position:relative;
 
 }
 
-.card{
+.section-title::after{
 
-background:#111;
+content:"";
 
-padding:40px;
+width:80px;
+height:4px;
 
-border-radius:20px;
+background:#6db33f;
 
-border:1px solid rgba(255,255,255,.08);
+position:absolute;
 
-}
-
-.video{
-
-aspect-ratio:16/9;
-
-width:100%;
-
-margin-top:30px;
-
-border-radius:20px;
-
-overflow:hidden;
+left:0;
+bottom:-15px;
 
 }
 
-.video iframe{
+.lead{
 
-width:100%;
-height:100%;
+font-size:20px;
+
+color:#555;
+
+max-width:800px;
 
 }
 
@@ -148,83 +113,116 @@ display:grid;
 
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-gap:30px;
+gap:25px;
 
 margin-top:50px;
 
 }
 
-.dna-card{
+.item{
 
-background:#111;
+background:white;
 
-padding:40px;
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.item h3{
+
+margin-bottom:15px;
+
+font-size:22px;
+
+}
+
+.video{
+
+margin-top:40px;
 
 border-radius:20px;
 
-transition:.3s;
+overflow:hidden;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.15);
 
 }
 
-.dna-card:hover{
+.video iframe{
 
-transform:translateY(-10px);
+width:100%;
 
-border:1px solid #00ff88;
+height:600px;
+
+border:none;
 
 }
 
-.dna-card h3{
+.philosophy{
 
-color:#00ff88;
+background:white;
+
+border-radius:20px;
+
+padding:50px;
+
+margin-top:40px;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.philosophy ul{
+
+margin-top:20px;
+
+padding-left:25px;
+
+}
+
+.philosophy li{
 
 margin-bottom:15px;
 
 }
 
-.mission{
-
-background:#101010;
-
-padding:60px;
-
-border-radius:25px;
+.next{
 
 text-align:center;
 
-}
-
-.quiz{
-
-margin-top:40px;
+padding:120px 30px;
 
 }
 
-.quiz button{
+.next a{
 
-padding:15px 30px;
+display:inline-block;
 
-margin:10px;
+padding:18px 50px;
 
-border:none;
-
-cursor:pointer;
-
-font-size:16px;
-
-}
-
-.correct{
-
-background:#00ff88;
-
-}
-
-.wrong{
-
-background:#444;
+background:#6db33f;
 
 color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.next a:hover{
+
+transform:translateY(-3px);
 
 }
 
@@ -233,17 +231,21 @@ color:white;
 position:fixed;
 
 top:20px;
+
 left:20px;
 
-background:#111;
+background:white;
 
 padding:10px 20px;
 
+border-radius:50px;
+
 text-decoration:none;
 
-color:white;
+color:#222;
 
-border-radius:10px;
+box-shadow:
+0 3px 10px rgba(0,0,0,.1);
 
 z-index:999;
 
@@ -253,19 +255,25 @@ z-index:999;
 
 .hero h1{
 
-font-size:50px;
+font-size:38px;
 
 }
 
 .hero p{
 
-font-size:20px;
+font-size:18px;
 
 }
 
-.title{
+.section-title{
 
-font-size:34px;
+font-size:30px;
+
+}
+
+.video iframe{
+
+height:250px;
 
 }
 
@@ -283,76 +291,82 @@ font-size:34px;
 
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
-<h1>KAWASAKI</h1>
+<h1>カワサキを知る</h1>
 
 <p>
-
-革新は、
-いつも挑戦から始まる。
-
+モーターサイクルライフを、より豊かに。
 </p>
-
-<a href="#history" class="start-btn">
-
-START LEARNING
-
-</a>
 
 </div>
 
 </section>
 
-<section id="history">
+<section class="section">
 
-<h2 class="title">
-
-川崎正蔵とKawasakiの原点
-
+<h2 class="section-title">
+カワサキとは
 </h2>
 
-<div class="card">
+<p class="lead">
 
-<p>
+カワサキはモーターサイクルだけではありません。
 
-1878年。
+船舶・鉄道車両・航空宇宙・エネルギーなど、
+幅広い分野で事業を展開する総合重工メーカーです。
 
-川崎正蔵は神戸で造船所を設立しました。
-
-「世界を相手に仕事をする」
-
-という強い想いから始まった挑戦は、
-
-現在のKawasakiへと繋がっています。
+私たちは、そのカワサキブランドを代表して
+お客様と接しています。
 
 </p>
+
+<div class="grid">
+
+<div class="item">
+<h3>モーターサイクル</h3>
+<p>
+Ninja・Zシリーズなどの開発・製造
+</p>
+</div>
+
+<div class="item">
+<h3>鉄道車両</h3>
+<p>
+新幹線や通勤電車などの製造
+</p>
+</div>
+
+<div class="item">
+<h3>航空宇宙</h3>
+<p>
+航空機・ヘリコプター関連事業
+</p>
+</div>
+
+<div class="item">
+<h3>船舶</h3>
+<p>
+神戸第一ドックから続く造船事業
+</p>
+</div>
 
 </div>
 
 </section>
 
-<section>
+<section class="section">
 
-<h2 class="title">
-
+<h2 class="section-title">
 神戸第一ドック
-
 </h2>
 
-<div class="card">
+<p class="lead">
 
-<p>
+カワサキの原点とも言える場所です。
 
-Kawasakiの原点。
-
-巨大な船を作る技術、
-
-空を飛ぶ技術、
-
-新幹線を走らせる技術。
-
-そのすべてがモーターサイクルへ活かされています。
+ものづくりへの想いと歴史を、
+ぜひ感じてみてください。
 
 </p>
 
@@ -360,133 +374,47 @@ Kawasakiの原点。
 
 <iframe
 src="https://www.youtube.com/embed/P4Y2pW1zds0"
-title="神戸第一ドック"
-frameborder="0"
 allowfullscreen>
 </iframe>
 
 </div>
 
-</div>
-
 </section>
 
-<section>
+<section class="section">
 
-<h2 class="title">
-
-KawasakiのDNA
-
-</h2>
-
-<div class="grid">
-
-<div class="dna-card">
-
-<h3>SHIP</h3>
-
-<p>
-
-造船技術
-
-</p>
-
-</div>
-
-<div class="dna-card">
-
-<h3>RAIL</h3>
-
-<p>
-
-新幹線技術
-
-</p>
-
-</div>
-
-<div class="dna-card">
-
-<h3>AIR</h3>
-
-<p>
-
-航空宇宙技術
-
-</p>
-
-</div>
-
-<div class="dna-card">
-
-<h3>ENERGY</h3>
-
-<p>
-
-エネルギー事業
-
-</p>
-
-</div>
-
-<div class="dna-card">
-
-<h3>MOTORCYCLE</h3>
-
-<p>
-
-モーターサイクル事業
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="title">
-
+<h2 class="section-title">
 カワサキプラザとは
-
 </h2>
 
 <div class="grid">
 
-<div class="dna-card">
+<div class="item">
 
-<h3>5 SENSES</h3>
+<h3>五感で楽しむ空間</h3>
 
 <p>
-
-五感で楽しむ空間
-
+店舗全体でブランドの世界観を体感していただきます。
 </p>
 
 </div>
 
-<div class="dna-card">
+<div class="item">
 
-<h3>LIFESTYLE</h3>
+<h3>ライフスタイル提案</h3>
 
 <p>
-
-ライフスタイル提案
-
+バイクだけではなく、その先の楽しさをご提案します。
 </p>
 
 </div>
 
-<div class="dna-card">
+<div class="item">
 
-<h3>SUPPORT</h3>
+<h3>安心のサポート</h3>
 
 <p>
-
-安心のサポート
-
+購入後も安心してお乗りいただける環境を提供します。
 </p>
 
 </div>
@@ -495,52 +423,51 @@ KawasakiのDNA
 
 </section>
 
-<section>
+<section class="section">
 
-<div class="mission">
-
-<h2>
-
-MISSION
-
+<h2 class="section-title">
+パドックグループとして
 </h2>
 
-<div class="quiz">
+<div class="philosophy">
 
 <p>
 
-川崎正蔵が最初に始めた事業は？
+私たちはバイクを販売する会社ではありません。
+
+お客様のモーターサイクルライフを豊かにするパートナーです。
 
 </p>
 
-<button
-class="correct"
-onclick="alert('MISSION CLEAR！')">
+<ul>
 
-造船
+<li>元気よく挨拶する</li>
 
-</button>
+<li>時間と約束を守る</li>
 
-<button
-class="wrong">
+<li>報告・連絡・相談を徹底する</li>
 
-航空機
+<li>身の回りを整える</li>
 
-</button>
+<li>気づく力を大切にする</li>
 
-<button
-class="wrong">
-
-鉄道
-
-</button>
+</ul>
 
 </div>
 
-</div>
+</section>
+
+<section class="next">
+
+<h2 style="margin-bottom:30px;">
+次のステップ
+</h2>
+
+<a href="#">
+電話対応へ進む
+</a>
 
 </section>
 
 </body>
-
 </html>
