@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -16,18 +17,19 @@ font-family:"Yu Gothic",sans-serif;
 }
 
 body{
-background:#f5f5f5;
+background:#f8f8f8;
 color:#222;
+line-height:1.8;
 }
 
 .hero{
 
-height:65vh;
+height:80vh;
 
 background:
 linear-gradient(
-rgba(0,0,0,.25),
-rgba(0,0,0,.45)
+rgba(0,0,0,.35),
+rgba(0,0,0,.55)
 ),
 url("yaizu.jpg");
 
@@ -35,40 +37,30 @@ background-size:cover;
 background-position:center;
 
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 
 text-align:center;
 
 color:white;
 
-}
-
-.hero-content{
-
-max-width:800px;
-
-padding:20px;
+padding:30px;
 
 }
 
 .hero h1{
 
-font-size:64px;
+font-size:80px;
 
 margin-bottom:20px;
-
-font-weight:700;
-
-letter-spacing:2px;
 
 }
 
 .hero p{
 
-font-size:22px;
+font-size:24px;
 
-line-height:1.8;
+max-width:700px;
 
 }
 
@@ -78,7 +70,7 @@ max-width:1200px;
 
 margin:auto;
 
-padding:80px 30px;
+padding:100px 30px;
 
 }
 
@@ -86,50 +78,48 @@ padding:80px 30px;
 
 text-align:center;
 
-max-width:900px;
-
-margin:auto;
-
 margin-bottom:80px;
 
 }
 
 .intro h2{
 
-font-size:38px;
+font-size:42px;
 
-margin-bottom:25px;
+margin-bottom:20px;
 
 }
 
 .intro p{
 
-font-size:18px;
+font-size:20px;
 
 color:#666;
 
-line-height:2;
+max-width:900px;
+
+margin:auto;
 
 }
 
-.menu-grid{
+.menu{
 
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(320px,1fr));
+repeat(auto-fit,minmax(300px,1fr));
 
 gap:30px;
 
 }
 
-.menu-card{
+.card{
 
 background:white;
 
-border-radius:20px;
-
 padding:40px;
+
+border-radius:25px;
 
 text-decoration:none;
 
@@ -142,7 +132,7 @@ transition:.3s;
 
 }
 
-.menu-card:hover{
+.card:hover{
 
 transform:translateY(-8px);
 
@@ -150,66 +140,60 @@ transform:translateY(-8px);
 
 .number{
 
-font-size:14px;
+color:#6DB33F;
 
-color:#999;
-
-margin-bottom:15px;
-
-letter-spacing:2px;
-
-}
-
-.menu-card h3{
-
-font-size:30px;
+font-weight:bold;
 
 margin-bottom:15px;
 
 }
 
-.menu-card p{
+.card h3{
+
+font-size:32px;
+
+margin-bottom:15px;
+
+}
+
+.card p{
 
 color:#666;
 
-line-height:1.8;
-
 }
 
-.mind{
+.message{
+
+margin-top:100px;
 
 background:white;
 
-margin-top:80px;
+padding:70px;
 
-padding:60px;
+border-radius:30px;
 
-border-radius:25px;
+text-align:center;
 
 box-shadow:
 0 10px 25px rgba(0,0,0,.08);
 
 }
 
-.mind h2{
+.message h2{
 
-font-size:36px;
+font-size:42px;
 
 margin-bottom:30px;
 
 }
 
-.mind ul{
+.message p{
 
-padding-left:25px;
+font-size:22px;
 
-}
+max-width:800px;
 
-.mind li{
-
-margin-bottom:15px;
-
-font-size:18px;
+margin:auto;
 
 }
 
@@ -218,6 +202,7 @@ font-size:18px;
 position:fixed;
 
 top:20px;
+
 left:20px;
 
 background:white;
@@ -239,15 +224,9 @@ z-index:999;
 
 @media(max-width:768px){
 
-.hero{
-
-height:50vh;
-
-}
-
 .hero h1{
 
-font-size:42px;
+font-size:48px;
 
 }
 
@@ -259,7 +238,19 @@ font-size:18px;
 
 .intro h2{
 
-font-size:30px;
+font-size:32px;
+
+}
+
+.message h2{
+
+font-size:32px;
+
+}
+
+.message p{
+
+font-size:18px;
 
 }
 
@@ -271,21 +262,20 @@ font-size:30px;
 
 <body>
 
-<a href="index.html" class="back">
+<a href="brand.html" class="back">
 ← 戻る
 </a>
 
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
 <h1>KAWASAKI ACADEMY</h1>
 
 <p>
 
-カワサキを知り、
-お客様に喜ばれるスタッフを目指すための
-学習コンテンツです。
+カワサキを学び、
+お客様の人生を豊かにする。
 
 </p>
 
@@ -313,9 +303,9 @@ font-size:30px;
 
 </div>
 
-<div class="menu-grid">
+<div class="menu">
 
-<a href="kawasaki-about.html" class="menu-card">
+<a href="kawasaki-about.html" class="card">
 
 <div class="number">
 01
@@ -327,7 +317,8 @@ font-size:30px;
 
 <p>
 
-カワサキの事業、
+カワサキとはどんな会社なのか。
+
 神戸第一ドック、
 カワサキプラザについて学びます。
 
@@ -335,7 +326,7 @@ font-size:30px;
 
 </a>
 
-<a href="#" class="menu-card">
+<a href="phone.html" class="card">
 
 <div class="number">
 02
@@ -354,7 +345,7 @@ font-size:30px;
 
 </a>
 
-<a href="#" class="menu-card">
+<a href="knowledge.html" class="card">
 
 <div class="number">
 03
@@ -367,13 +358,13 @@ font-size:30px;
 <p>
 
 主要モデルや特徴、
-お客様へのご案内方法を学びます。
+提案の考え方を学びます。
 
 </p>
 
 </a>
 
-<a href="#" class="menu-card">
+<a href="concierge.html" class="card">
 
 <div class="number">
 04
@@ -392,7 +383,7 @@ font-size:30px;
 
 </a>
 
-<a href="#" class="menu-card">
+<a href="technician.html" class="card">
 
 <div class="number">
 05
@@ -413,25 +404,24 @@ font-size:30px;
 
 </div>
 
-<div class="mind">
+<div class="message">
 
 <h2>
-パドックグループの基本姿勢
+
+私たちの仕事
+
 </h2>
 
-<ul>
+<p>
 
-<li>元気よく挨拶する</li>
+私たちはバイクを販売する仕事ではありません。
 
-<li>時間と約束を守る</li>
+モーターサイクルライフを豊かにする仕事です。
 
-<li>報告・連絡・相談を徹底する</li>
+お客様の期待を超える体験を届けるために、
+学び続けましょう。
 
-<li>身の回りを整える</li>
-
-<li>気づく力を大切にする</li>
-
-</ul>
+</p>
 
 </div>
 
