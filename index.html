@@ -692,12 +692,12 @@ let pass = document.getElementById("pass").value;
 
 if(id === LOGIN_ID && pass === LOGIN_PASS){
 
-document.getElementById("loginPage").style.display="none";
-document.getElementById("brandPage").classList.remove("hidden");
+location.href = "philosophy.html";
 
 }else{
 
-document.getElementById("error").innerText="IDまたはパスワードが違います";
+document.getElementById("error").innerText =
+"IDまたはパスワードが違います";
 
 }
 
