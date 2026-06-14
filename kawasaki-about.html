@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>カワサキを知る</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
+body{
+background:#f7f7f7;
+color:#222;
+line-height:1.9;
+}
+
+.hero{
+
+height:80vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.25),
+rgba(0,0,0,.45)
+),
+url("yaizu.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+color:white;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+font-weight:700;
+
+}
+
+.hero p{
+
+font-size:24px;
+
+}
+
+.section{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:100px 30px;
+
+}
+
+.section-title{
+
+font-size:42px;
+
+margin-bottom:40px;
+
+position:relative;
+
+}
+
+.section-title::after{
+
+content:"";
+
+width:80px;
+height:4px;
+
+background:#6db33f;
+
+position:absolute;
+
+left:0;
+bottom:-15px;
+
+}
+
+.lead{
+
+font-size:20px;
+
+color:#555;
+
+max-width:800px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.item{
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.item h3{
+
+margin-bottom:15px;
+
+font-size:22px;
+
+}
+
+.video{
+
+margin-top:40px;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.video iframe{
+
+width:100%;
+
+height:600px;
+
+border:none;
+
+}
+
+.philosophy{
+
+background:white;
+
+border-radius:20px;
+
+padding:50px;
+
+margin-top:40px;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.philosophy ul{
+
+margin-top:20px;
+
+padding-left:25px;
+
+}
+
+.philosophy li{
+
+margin-bottom:15px;
+
+}
+
+.next{
+
+text-align:center;
+
+padding:120px 30px;
+
+}
+
+.next a{
+
+display:inline-block;
+
+padding:18px 50px;
+
+background:#6db33f;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.next a:hover{
+
+transform:translateY(-3px);
+
+}
+
+.back{
+
+position:fixed;
+
+top:20px;
+
+left:20px;
+
+background:white;
+
+padding:10px 20px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:#222;
+
+box-shadow:
+0 3px 10px rgba(0,0,0,.1);
+
+z-index:999;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.section-title{
+
+font-size:30px;
+
+}
+
+.video iframe{
+
+height:250px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="index.html" class="back">
+← 戻る
+</a>
+
+<section class="hero">
+
+<div>
+
+<h1>カワサキを知る</h1>
+
+<p>
+モーターサイクルライフを、より豊かに。
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+カワサキとは
+</h2>
+
+<p class="lead">
+
+カワサキはモーターサイクルだけではありません。
+
+船舶・鉄道車両・航空宇宙・エネルギーなど、
+幅広い分野で事業を展開する総合重工メーカーです。
+
+私たちは、そのカワサキブランドを代表して
+お客様と接しています。
+
+</p>
+
+<div class="grid">
+
+<div class="item">
+<h3>モーターサイクル</h3>
+<p>
+Ninja・Zシリーズなどの開発・製造
+</p>
+</div>
+
+<div class="item">
+<h3>鉄道車両</h3>
+<p>
+新幹線や通勤電車などの製造
+</p>
+</div>
+
+<div class="item">
+<h3>航空宇宙</h3>
+<p>
+航空機・ヘリコプター関連事業
+</p>
+</div>
+
+<div class="item">
+<h3>船舶</h3>
+<p>
+神戸第一ドックから続く造船事業
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+神戸第一ドック
+</h2>
+
+<p class="lead">
+
+カワサキの原点とも言える場所です。
+
+ものづくりへの想いと歴史を、
+ぜひ感じてみてください。
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/P4Y2pW1zds0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+カワサキプラザとは
+</h2>
+
+<div class="grid">
+
+<div class="item">
+
+<h3>五感で楽しむ空間</h3>
+
+<p>
+店舗全体でブランドの世界観を体感していただきます。
+</p>
+
+</div>
+
+<div class="item">
+
+<h3>ライフスタイル提案</h3>
+
+<p>
+バイクだけではなく、その先の楽しさをご提案します。
+</p>
+
+</div>
+
+<div class="item">
+
+<h3>安心のサポート</h3>
+
+<p>
+購入後も安心してお乗りいただける環境を提供します。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+パドックグループとして
+</h2>
+
+<div class="philosophy">
+
+<p>
+
+私たちはバイクを販売する会社ではありません。
+
+お客様のモーターサイクルライフを豊かにするパートナーです。
+
+</p>
+
+<ul>
+
+<li>元気よく挨拶する</li>
+
+<li>時間と約束を守る</li>
+
+<li>報告・連絡・相談を徹底する</li>
+
+<li>身の回りを整える</li>
+
+<li>気づく力を大切にする</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section class="next">
+
+<h2 style="margin-bottom:30px;">
+次のステップ
+</h2>
+
+<a href="#">
+電話対応へ進む
+</a>
+
+</section>
+
+</body>
+</html>
