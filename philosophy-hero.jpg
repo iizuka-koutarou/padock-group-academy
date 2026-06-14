@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>四方良し | PADOCK GROUP ACADEMY</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
+body{
+background:#f8f8f8;
+color:#222;
+line-height:1.9;
+}
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.35),
+rgba(0,0,0,.55)
+),
+url("philosophy-hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+color:white;
+padding:30px;
+
+}
+
+.hero h1{
+
+font-size:90px;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:24px;
+max-width:800px;
+
+}
+
+.section{
+
+max-width:1200px;
+margin:auto;
+padding:100px 30px;
+
+}
+
+.title{
+
+font-size:42px;
+margin-bottom:30px;
+
+position:relative;
+
+}
+
+.title:after{
+
+content:"";
+
+display:block;
+
+width:80px;
+height:4px;
+
+background:#6DB33F;
+
+margin-top:15px;
+
+}
+
+.lead{
+
+font-size:20px;
+color:#555;
+max-width:900px;
+
+}
+
+.card-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.05);
+
+}
+
+.card h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+color:#666;
+
+}
+
+.philosophy-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.philosophy-item{
+
+background:#fff;
+
+padding:40px;
+
+border-radius:20px;
+
+border-top:5px solid #6DB33F;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.05);
+
+}
+
+.philosophy-item h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.story{
+
+background:white;
+
+padding:60px;
+
+border-radius:25px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.05);
+
+margin-top:50px;
+
+}
+
+.story p{
+
+margin-bottom:20px;
+
+}
+
+.values{
+
+background:#111;
+
+color:white;
+
+padding:100px 30px;
+
+margin-top:50px;
+
+}
+
+.values h2{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:50px;
+
+}
+
+.values ul{
+
+max-width:800px;
+
+margin:auto;
+
+list-style:none;
+
+}
+
+.values li{
+
+padding:20px 0;
+
+border-bottom:
+1px solid rgba(255,255,255,.1);
+
+font-size:22px;
+
+}
+
+.next{
+
+padding:120px 30px;
+
+text-align:center;
+
+}
+
+.next a{
+
+display:inline-block;
+
+padding:20px 50px;
+
+background:#6DB33F;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.next a:hover{
+
+transform:translateY(-3px);
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:52px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.title{
+
+font-size:32px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div>
+
+<h1>四方良し</h1>
+
+<p>
+
+お客様と地域に愛され、
+全社員の幸せを恒久的に実現する。
+
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+モーターサイクルの価値
+</h2>
+
+<p class="lead">
+
+モーターサイクルは単なる移動手段ではありません。
+
+自分で行き先を決め、
+自分で走り、
+自分で景色を見つける。
+
+人生を豊かにする特別な存在です。
+
+私たちはその感動を一人でも多くのお客様へ届けたいと考えています。
+
+</p>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+四方良し
+</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>売り手よし</h3>
+<p>
+社員一人ひとりが誇りを持ち、
+成長し続けられる環境をつくる。
+</p>
+</div>
+
+<div class="card">
+<h3>買い手よし</h3>
+<p>
+お客様に感動と価値を提供し、
+期待を超える体験を届ける。
+</p>
+</div>
+
+<div class="card">
+<h3>世間よし</h3>
+<p>
+地域社会に必要とされる企業として
+貢献し続ける。
+</p>
+</div>
+
+<div class="card">
+<h3>未来よし</h3>
+<p>
+未来へ価値を繋ぎ、
+次世代へ誇れる企業をつくる。
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+4つのフィロソフィー
+</h2>
+
+<div class="philosophy-grid">
+
+<div class="philosophy-item">
+<h3>挑戦</h3>
+<p>
+できるかではなく、
+どうしたらできるかを考える。
+</p>
+</div>
+
+<div class="philosophy-item">
+<h3>達成</h3>
+<p>
+決めたことを最後までやり切る。
+</p>
+</div>
+
+<div class="philosophy-item">
+<h3>誠意</h3>
+<p>
+約束を守り、
+誠実に行動する。
+</p>
+</div>
+
+<div class="philosophy-item">
+<h3>スペシャリティ</h3>
+<p>
+学び続け、
+プロフェッショナルを目指す。
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+創業ストーリー
+</h2>
+
+<div class="story">
+
+<p>
+
+「愚痴をこぼすくらいなら、自分でやってみたらどうだ。」
+
+</p>
+
+<p>
+
+その言葉からパドックグループの挑戦は始まりました。
+
+理想の店をつくりたい。
+
+もっとお客様に喜んでもらいたい。
+
+そんな想いを持った挑戦が、
+今のパドックグループへと繋がっています。
+
+</p>
+
+</div>
+
+</section>
+
+<section class="values">
+
+<h2>
+パドックで大切にすること
+</h2>
+
+<ul>
+
+<li>元気よく挨拶する</li>
+
+<li>時間と約束を守る</li>
+
+<li>報告・連絡・相談を徹底する</li>
+
+<li>身の回りを整える</li>
+
+<li>気づく力を持つ</li>
+
+<li>仲間を助ける</li>
+
+</ul>
+
+</section>
+
+<section class="next">
+
+<h2 style="margin-bottom:30px;">
+次のステップ
+</h2>
+
+<a href="index.html">
+ブランド選択へ進む
+</a>
+
+</section>
+
+</body>
+</html>
