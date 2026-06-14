@@ -290,39 +290,347 @@ LOGIN
 
 <div id="brandPage" class="hidden">
 
-<div class="hero-image"></div>
+<style>
 
-<div class="hero">
+.brand-screen{
+
+min-height:100vh;
+
+background:
+radial-gradient(circle at center,
+rgba(255,255,255,.03),
+transparent 60%),
+#050505;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.brand-screen::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.02),
+transparent
+);
+
+animation:sweep 8s linear infinite;
+
+}
+
+@keyframes sweep{
+
+0%{
+transform:translateX(-100%);
+}
+
+100%{
+transform:translateX(100%);
+}
+
+}
+
+.brand-container{
+
+max-width:1400px;
+
+margin:auto;
+
+padding:120px 30px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.brand-header{
+
+text-align:center;
+
+margin-bottom:80px;
+
+}
+
+.brand-header h1{
+
+font-size:70px;
+
+letter-spacing:10px;
+
+margin-bottom:15px;
+
+}
+
+.brand-header p{
+
+color:#888;
+
+letter-spacing:6px;
+
+}
+
+.philosophy-card{
+
+max-width:700px;
+
+margin:auto;
+
+padding:50px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+cursor:pointer;
+
+transition:.3s;
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.philosophy-card:hover{
+
+transform:translateY(-8px);
+
+border-color:white;
+
+}
+
+.brand-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:30px;
+
+}
+
+.future-card{
+
+padding:80px 50px;
+
+background:#101010;
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.08);
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+.future-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.kawasaki:hover{
+
+border-color:#00ff88;
+
+box-shadow:0 0 40px rgba(0,255,120,.3);
+
+}
+
+.ducati:hover{
+
+border-color:#ff4444;
+
+box-shadow:0 0 40px rgba(255,0,0,.3);
+
+}
+
+.number{
+
+font-size:14px;
+
+letter-spacing:4px;
+
+color:#777;
+
+margin-bottom:15px;
+
+}
+
+.future-card h2{
+
+font-size:50px;
+
+margin-bottom:20px;
+
+}
+
+.future-card p{
+
+color:#bbb;
+
+line-height:1.8;
+
+}
+
+.enter{
+
+margin-top:30px;
+
+letter-spacing:5px;
+
+font-size:14px;
+
+}
+
+@media(max-width:900px){
+
+.brand-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.brand-header h1{
+
+font-size:42px;
+
+}
+
+.future-card h2{
+
+font-size:36px;
+
+}
+
+}
+
+</style>
+
+<div class="brand-screen">
+
+<div class="brand-container">
+
+<div class="brand-header">
 
 <h1>PADOCK GROUP</h1>
 
-<h2>ACADEMY</h2>
-
-<p>ブランドを選択してください</p>
+<p>SELECT YOUR PATH</p>
 
 </div>
 
-<div class="brand-select">
+<div class="philosophy-card"
+onclick="location.href='philosophy.html'">
 
-<div class="brand-card" onclick="showMenu('KAWASAKI')">
+<div class="number">01</div>
+
+<h2>PHILOSOPHY</h2>
+
+<p>
+
+四方良し
+
+<br><br>
+
+お客様と地域に愛され、
+
+全社員の幸せを恒久的に実現する
+
+</p>
+
+</div>
+
+<div class="brand-grid">
+
+<div class="future-card kawasaki"
+onclick="showMenu('KAWASAKI')">
+
+<div class="number">02</div>
 
 <h2>KAWASAKI</h2>
 
-<p>カワサキプラザ研修</p>
+<p>
+
+Ride the Good Times
+
+<br><br>
+
+KAZE
+
+プラザ基準
+
+車両知識
+
+</p>
+
+<div class="enter">
+
+ENTER
 
 </div>
 
-<div class="brand-card" onclick="showMenu('DUCATI')">
+</div>
+
+<div class="future-card ducati"
+onclick="showMenu('DUCATI')">
+
+<div class="number">03</div>
 
 <h2>DUCATI</h2>
 
-<p>ドゥカティ研修</p>
+<p>
+
+Style. Sophistication.
+
+Performance.
+
+<br><br>
+
+DRE
+
+認定プログラム
+
+ブランド研修
+
+</p>
+
+<div class="enter">
+
+ENTER
 
 </div>
 
 </div>
 
 </div>
+
+</div>
+
+</div>
+
+</div>
+
 
 <div id="menuPage" class="hidden">
 
