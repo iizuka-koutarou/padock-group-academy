@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="ja">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,44 +17,70 @@ font-family:"Yu Gothic",sans-serif;
 }
 
 body{
-background:#050505;
-color:white;
-}
 
-.hidden{
-display:none;
-}
-
-.center{
 height:100vh;
+
 display:flex;
 justify-content:center;
 align-items:center;
-padding:20px;
+
+background:
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.65)
+),
+url("hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+color:white;
+
 }
 
 .card{
 
-background:#111;
+background:
+rgba(0,0,0,.75);
+
+backdrop-filter:blur(10px);
 
 padding:60px;
 
-border-radius:20px;
+border-radius:25px;
 
 width:100%;
 max-width:500px;
 
 text-align:center;
 
+box-shadow:
+0 15px 40px rgba(0,0,0,.3);
+
 }
 
 .logo{
+
 width:220px;
+
 margin-bottom:30px;
+
 }
 
 h1{
-margin-bottom:20px;
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+.subtitle{
+
+color:#bbb;
+
+margin-bottom:30px;
+
 }
 
 input{
@@ -66,9 +91,11 @@ padding:18px;
 
 margin-top:15px;
 
-background:#1c1c1c;
-
 border:none;
+
+border-radius:12px;
+
+background:#1d1d1d;
 
 color:white;
 
@@ -78,182 +105,72 @@ font-size:16px;
 
 button{
 
-margin-top:20px;
+width:100%;
 
-padding:18px 40px;
+padding:18px;
 
-background:white;
+margin-top:25px;
 
 border:none;
 
-font-size:16px;
+border-radius:12px;
 
-cursor:pointer;
+background:#6DB33F;
 
-}
+color:white;
 
-button:hover{
+font-size:18px;
 
-background:#d9d9d9;
-
-}
-
-.error{
-
-color:red;
-
-margin-top:20px;
-
-}
-
-.hero-image{
-
-height:35vh;
-
-background:
-linear-gradient(
-rgba(0,0,0,.3),
-rgba(0,0,0,.6)
-),
-url("hero.jpg");
-
-background-size:cover;
-background-position:center;
-
-}
-
-.hero{
-
-padding:80px 20px;
-
-text-align:center;
-
-}
-
-.hero h1{
-
-font-size:70px;
-
-letter-spacing:8px;
-
-}
-
-.hero h2{
-
-font-size:50px;
-
-font-weight:300;
-
-letter-spacing:10px;
-
-margin-bottom:30px;
-
-}
-
-.brand-select{
-
-max-width:1000px;
-
-margin:auto;
-
-padding:50px 20px;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:30px;
-
-}
-
-.brand-card{
-
-background:#111;
-
-padding:60px;
-
-text-align:center;
+font-weight:bold;
 
 cursor:pointer;
 
 transition:.3s;
 
-border:1px solid #222;
+}
+
+button:hover{
+
+transform:translateY(-2px);
 
 }
 
-.brand-card:hover{
+.error{
 
-transform:translateY(-5px);
+margin-top:20px;
 
-border-color:white;
-
-}
-
-.menu{
-
-max-width:900px;
-
-margin:auto;
-
-padding:50px 20px;
+color:#ff8080;
 
 }
 
-.menu a{
+.footer{
 
-display:block;
+margin-top:30px;
 
-padding:30px 0;
+font-size:12px;
 
-border-bottom:1px solid rgba(255,255,255,.1);
-
-text-decoration:none;
-
-color:white;
-
-}
-
-.menu h3{
-
-font-size:32px;
-
-}
-
-.menu p{
-
-color:#999;
-
-margin-top:5px;
-
-}
-
-.back{
-
-display:inline-block;
-
-margin:20px;
-
-color:white;
-
-text-decoration:none;
+color:#777;
 
 }
 
 @media(max-width:768px){
 
-.brand-select{
+.card{
 
-grid-template-columns:1fr;
+padding:40px 25px;
 
 }
 
-.hero h1{
-font-size:40px;
+.logo{
+
+width:170px;
+
 }
 
-.hero h2{
-font-size:30px;
+h1{
+
+font-size:28px;
+
 }
 
 }
@@ -264,417 +181,40 @@ font-size:30px;
 
 <body>
 
-<div id="loginPage" class="center">
-
 <div class="card">
 
 <img src="ロゴ.png" class="logo">
 
 <h1>PADOCK GROUP ACADEMY</h1>
 
-<p>ログインしてください</p>
+<p class="subtitle">
 
-<input id="id" placeholder="ID">
+学び、成長し、お客様へ価値を届ける。
 
-<input id="pass" type="password" placeholder="パスワード">
+</p>
+
+<input
+id="id"
+type="text"
+placeholder="ID">
+
+<input
+id="pass"
+type="password"
+placeholder="パスワード">
 
 <button onclick="login()">
 LOGIN
 </button>
 
-<div id="error" class="error"></div>
-
+<div
+id="error"
+class="error">
 </div>
 
-</div>
+<div class="footer">
 
-<div id="brandPage" class="hidden">
-
-<style>
-
-.brand-screen{
-
-min-height:100vh;
-
-background:
-radial-gradient(circle at center,
-rgba(255,255,255,.03),
-transparent 60%),
-#050505;
-
-overflow:hidden;
-
-position:relative;
-
-}
-
-.brand-screen::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:
-linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.02),
-transparent
-);
-
-animation:sweep 8s linear infinite;
-
-}
-
-@keyframes sweep{
-
-0%{
-transform:translateX(-100%);
-}
-
-100%{
-transform:translateX(100%);
-}
-
-}
-
-.brand-container{
-
-max-width:1400px;
-
-margin:auto;
-
-padding:120px 30px;
-
-position:relative;
-
-z-index:2;
-
-}
-
-.brand-header{
-
-text-align:center;
-
-margin-bottom:80px;
-
-}
-
-.brand-header h1{
-
-font-size:70px;
-
-letter-spacing:10px;
-
-margin-bottom:15px;
-
-}
-
-.brand-header p{
-
-color:#888;
-
-letter-spacing:6px;
-
-}
-
-.philosophy-card{
-
-max-width:700px;
-
-margin:auto;
-
-padding:50px;
-
-border-radius:25px;
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(255,255,255,.08);
-
-backdrop-filter:blur(15px);
-
-cursor:pointer;
-
-transition:.3s;
-
-text-align:center;
-
-margin-bottom:60px;
-
-}
-
-.philosophy-card:hover{
-
-transform:translateY(-8px);
-
-border-color:white;
-
-}
-
-.brand-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:30px;
-
-}
-
-.future-card{
-
-padding:80px 50px;
-
-background:#101010;
-
-border-radius:25px;
-
-border:1px solid rgba(255,255,255,.08);
-
-cursor:pointer;
-
-transition:.4s;
-
-}
-
-.future-card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.kawasaki:hover{
-
-border-color:#00ff88;
-
-box-shadow:0 0 40px rgba(0,255,120,.3);
-
-}
-
-.ducati:hover{
-
-border-color:#ff4444;
-
-box-shadow:0 0 40px rgba(255,0,0,.3);
-
-}
-
-.number{
-
-font-size:14px;
-
-letter-spacing:4px;
-
-color:#777;
-
-margin-bottom:15px;
-
-}
-
-.future-card h2{
-
-font-size:50px;
-
-margin-bottom:20px;
-
-}
-
-.future-card p{
-
-color:#bbb;
-
-line-height:1.8;
-
-}
-
-.enter{
-
-margin-top:30px;
-
-letter-spacing:5px;
-
-font-size:14px;
-
-}
-
-@media(max-width:900px){
-
-.brand-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.brand-header h1{
-
-font-size:42px;
-
-}
-
-.future-card h2{
-
-font-size:36px;
-
-}
-
-}
-
-</style>
-
-<div class="brand-screen">
-
-<div class="brand-container">
-
-<div class="brand-header">
-
-<h1>PADOCK GROUP</h1>
-
-<p>SELECT YOUR PATH</p>
-
-</div>
-
-<div class="philosophy-card"
-onclick="location.href='philosophy.html'">
-
-<div class="number">01</div>
-
-<h2>PHILOSOPHY</h2>
-
-<p>
-
-四方良し
-
-<br><br>
-
-お客様と地域に愛され、
-
-全社員の幸せを恒久的に実現する
-
-</p>
-
-</div>
-
-<div class="brand-grid">
-
-<div class="future-card kawasaki"
-onclick="location.href='kawasaki.html'"
-
-<div class="number">02</div>
-
-<h2>KAWASAKI</h2>
-
-<p>
-
-Ride the Good Times
-
-<br><br>
-
-KAZE
-
-プラザ基準
-
-車両知識
-
-</p>
-
-<div class="enter">
-
-ENTER
-
-</div>
-
-</div>
-
-<div class="future-card ducati"
-onclick="showMenu('DUCATI')">
-
-<div class="number">03</div>
-
-<h2>DUCATI</h2>
-
-<p>
-
-Style. Sophistication.
-
-Performance.
-
-<br><br>
-
-DRE
-
-認定プログラム
-
-ブランド研修
-
-</p>
-
-<div class="enter">
-
-ENTER
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div id="menuPage" class="hidden">
-
-<a href="#" class="back" onclick="backToBrands()">
-← ブランド選択へ戻る
-</a>
-
-<div class="hero">
-
-<h1 id="brandTitle">KAWASAKI</h1>
-
-</div>
-
-<div class="menu">
-
-<a href="philosophy.html">
-<h3>PHILOSOPHY</h3>
-<p>経営理念</p>
-</a>
-
-<a href="#">
-<h3>PHONE SKILL</h3>
-<p>電話対応</p>
-</a>
-
-<a href="#">
-<h3>CONCIERGE</h3>
-<p>コンシェルジュ</p>
-</a>
-
-<a href="#">
-<h3>TECHNICIAN</h3>
-<p>テクニシャン</p>
-</a>
-
-<a href="#">
-<h3>PRODUCT KNOWLEDGE</h3>
-<p>車両知識</p>
-</a>
-
-<a href="#">
-<h3>FAQ</h3>
-<p>よくある質問</p>
-</a>
+PADOCK GROUP
 
 </div>
 
@@ -687,10 +227,16 @@ const LOGIN_PASS = "paddock2026";
 
 function login(){
 
-let id = document.getElementById("id").value;
-let pass = document.getElementById("pass").value;
+const id =
+document.getElementById("id").value;
 
-if(id === LOGIN_ID && pass === LOGIN_PASS){
+const pass =
+document.getElementById("pass").value;
+
+if(
+id === LOGIN_ID &&
+pass === LOGIN_PASS
+){
 
 location.href = "philosophy.html";
 
@@ -703,26 +249,7 @@ document.getElementById("error").innerText =
 
 }
 
-function showMenu(brand){
-
-document.getElementById("brandPage").classList.add("hidden");
-
-document.getElementById("menuPage").classList.remove("hidden");
-
-document.getElementById("brandTitle").innerText = brand;
-
-}
-
-function backToBrands(){
-
-document.getElementById("menuPage").classList.add("hidden");
-
-document.getElementById("brandPage").classList.remove("hidden");
-
-}
-
 </script>
 
 </body>
-
 </html>
