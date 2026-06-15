@@ -231,29 +231,43 @@ if(score >= 8){
 
 result.innerHTML =
 `<div class="pass">
-合格！ ${score}/10<br><br>
-Kawasaki Academyへ進めます。
+
+合格！ ${score}/10
+
 <br><br>
-<a href="next-stage.html">
-style="color:white;">
-▶ Kawasakiへ進む
+
+次のステージへ進みましょう。
+
+<br><br>
+
+<a href="next-stage.html"
+style="
+display:inline-block;
+padding:15px 30px;
+background:#6DB33F;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-size:20px;
+font-weight:bold;
+">
+
+▶ 次へ進む
+
 </a>
+
 </div>`;
 
 }else{
 
 result.innerHTML =
 `<div class="fail">
-不合格 ${score}/10
-<br><br>
+不合格 ${score}/10 <br><br>
 もう一度フィロソフィーを読み返しましょう。
+
 </div>`;
 
 }
-
-}
-
-</script>
 
 </body>
 </html>
