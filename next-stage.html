@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NEXT STAGE</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+.hero{
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+color:#bbb;
+}
+
+.grid{
+max-width:1200px;
+margin:auto;
+padding:50px 20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.card{
+padding:60px;
+border-radius:20px;
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.kawasaki{
+background:#6DB33F;
+}
+
+.ducati{
+background:#b00000;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.card p{
+font-size:18px;
+line-height:1.8;
+}
+
+@media(max-width:768px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1>NEXT STAGE</h1>
+
+<p>
+
+理念を学び、次のステージへ進みましょう
+
+</p>
+
+</section>
+
+<div class="grid">
+
+<a href="kawasaki.html" class="card kawasaki">
+
+<h2>KAWASAKI</h2>
+
+<p>
+
+Ride the Good Times
+
+<br><br>
+
+Kawasaki Academyへ進む
+
+</p>
+
+</a>
+
+<a href="#" class="card ducati">
+
+<h2>DUCATI</h2>
+
+<p>
+
+Style. Sophistication. Performance.
+
+<br><br>
+
+準備中
+
+</p>
+
+</a>
+
+</div>
+
+</body>
+
+</html>
