@@ -8,25 +8,7 @@
 <title>NEXT STAGE</title>
 
 <style>
-.home-header{
 
-padding:20px;
-
-background:#111;
-
-}
-
-.home-header a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:bold;
-
-font-size:18px;
-
-}
 *{
 margin:0;
 padding:0;
@@ -35,40 +17,80 @@ font-family:"Yu Gothic",sans-serif;
 }
 
 body{
-background:#111;
+background:#050505;
 color:white;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
 }
 
-.hero{
-padding:100px 20px;
+.container{
+max-width:1200px;
+width:100%;
 text-align:center;
 }
 
-.hero h1{
+h1{
 font-size:60px;
 margin-bottom:20px;
 }
 
-.hero p{
-font-size:20px;
-color:#bbb;
+.sub{
+font-size:22px;
+color:#aaa;
+margin-bottom:60px;
 }
 
-.grid{
-max-width:1200px;
-margin:auto;
-padding:50px 20px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
+.cards{
+display:flex;
+gap:40px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 .card{
-padding:60px;
+width:450px;
+background:#111;
 border-radius:20px;
-text-decoration:none;
-color:white;
+overflow:hidden;
 transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.card-content{
+padding:30px;
+}
+
+.card h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.card p{
+color:#ccc;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+border-radius:10px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+color:white;
 }
 
 .kawasaki{
@@ -76,33 +98,14 @@ background:#6DB33F;
 }
 
 .ducati{
-background:#b00000;
+background:#d40000;
 }
 
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h2{
-font-size:40px;
-margin-bottom:15px;
-}
-
-.card p{
-font-size:18px;
-line-height:1.8;
-}
-
-@media(max-width:768px){
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:40px;
-}
-
+.home{
+margin-top:60px;
+display:inline-block;
+color:#aaa;
+text-decoration:none;
 }
 
 </style>
@@ -110,63 +113,80 @@ font-size:40px;
 </head>
 
 <body>
-<header class="home-header">
 
-<a href="welcome.html">
-
-🏠 HOME
-
-</a>
-
-</header>
-<section class="hero">
+<div class="container">
 
 <h1>NEXT STAGE</h1>
 
+<p class="sub">
+
+ブランドの理解を深めましょう
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="kawasaki-top.jpg">
+
+<div class="card-content">
+
+<h2>Kawasaki Academy</h2>
+
 <p>
 
-理念を学び、次のステージへ進みましょう
+カワサキの歴史・思想・魅力を学び、
+お客様へ伝えられるスタッフを目指します。
 
 </p>
 
-</section>
+<a href="kawasaki.html" class="btn kawasaki">
 
-<div class="grid">
-
-<a href="kawasaki.html" class="card kawasaki">
-
-<h2>KAWASAKI</h2>
-
-<p>
-
-Ride the Good Times
-
-<br><br>
-
-Kawasaki Academyへ進む
-
-</p>
+Kawasakiへ進む
 
 </a>
 
-<a href="#" class="card ducati">
+</div>
 
-<h2>DUCATI</h2>
+</div>
+
+<div class="card">
+
+<img src="ducati-top.jpg">
+
+<div class="card-content">
+
+<h2>Ducati Academy</h2>
 
 <p>
 
-Style. Sophistication. Performance.
-
-<br><br>
-
-準備中
+ドゥカティブランドの世界観と
+情熱を学びます。
 
 </p>
+
+<a href="ducati.html" class="btn ducati">
+
+Ducatiへ進む
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<br>
+
+<a href="welcome.html" class="home">
+
+🏠 HOMEへ戻る
 
 </a>
 
 </div>
 
 </body>
-
 </html>
