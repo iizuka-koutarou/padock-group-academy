@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -16,8 +17,7 @@ font-family:"Yu Gothic",sans-serif;
 }
 
 body{
-height:100vh;
-overflow:hidden;
+
 background:
 linear-gradient(
 rgba(0,0,0,.55),
@@ -27,39 +27,58 @@ url("hero.jpg");
 
 background-size:cover;
 background-position:center;
-
-display:flex;
-justify-content:center;
-align-items:center;
+background-attachment:fixed;
 
 color:white;
+
 }
 
 .container{
+
 text-align:center;
+
 max-width:900px;
-padding:30px;
+
+margin:auto;
+
+padding:100px 30px 50px;
+
 }
 
 .logo{
+
 font-size:18px;
+
 letter-spacing:8px;
+
 color:#bbbbbb;
+
 margin-bottom:20px;
+
 }
 
 h1{
+
 font-size:70px;
+
 font-weight:700;
+
 line-height:1.2;
+
 margin-bottom:30px;
+
 }
 
 .catch{
+
 font-size:22px;
+
 line-height:2;
+
 color:#dddddd;
+
 margin-bottom:50px;
+
 }
 
 .start-btn{
@@ -82,11 +101,80 @@ border-radius:50px;
 
 transition:.3s;
 
+margin-bottom:80px;
+
 }
 
 .start-btn:hover{
 
 transform:translateY(-5px);
+
+}
+
+.academy-title{
+
+font-size:32px;
+
+margin-bottom:30px;
+
+}
+
+.academy-grid{
+
+max-width:1100px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+padding-bottom:80px;
+
+}
+
+.academy-card{
+
+background:rgba(255,255,255,.92);
+
+padding:30px;
+
+border-radius:20px;
+
+text-decoration:none;
+
+color:#222;
+
+transition:.3s;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.academy-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.academy-card h3{
+
+color:#6DB33F;
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+.academy-card p{
+
+line-height:1.8;
+
+color:#666;
 
 }
 
@@ -98,6 +186,10 @@ font-size:42px;
 
 .catch{
 font-size:18px;
+}
+
+.academy-grid{
+grid-template-columns:1fr;
 }
 
 }
@@ -125,9 +217,77 @@ ACADEMY
 
 </div>
 
-<a href="first-day.html">
+<a href="first-day.html" class="start-btn">
 START
 </a>
+
+<h2 class="academy-title">
+ACADEMY MENU
+</h2>
+
+<div class="academy-grid">
+
+<a href="first-day.html" class="academy-card">
+
+<h3>入社初日</h3>
+
+<p>
+パドックグループの考え方を学ぶ
+</p>
+
+</a>
+
+<a href="philosophy.html" class="academy-card">
+
+<h3>経営理念</h3>
+
+<p>
+四方良しと理念経営を理解する
+</p>
+
+</a>
+
+<a href="philosophy-test.html" class="academy-card">
+
+<h3>理解度テスト</h3>
+
+<p>
+フィロソフィーの理解を確認する
+</p>
+
+</a>
+
+<a href="next-stage.html" class="academy-card">
+
+<h3>ブランド選択</h3>
+
+<p>
+Kawasaki・Ducati Academyへ進む
+</p>
+
+</a>
+
+<a href="phone.html" class="academy-card">
+
+<h3>電話対応</h3>
+
+<p>
+お客様対応の基本を学ぶ
+</p>
+
+</a>
+
+<a href="complaint.html" class="academy-card">
+
+<h3>クレーム対応</h3>
+
+<p>
+誠意ある対応を学ぶ
+</p>
+
+</a>
+
+</div>
 
 </div>
 
