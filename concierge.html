@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>コンシェルジュ | KAWASAKI ACADEMY</title>
+<title>コンシェルジュ</title>
 
 <style>
 
@@ -16,91 +17,100 @@ font-family:"Yu Gothic",sans-serif;
 }
 
 body{
-background:#f8f8f8;
+background:#f5f5f5;
 color:#222;
-line-height:1.9;
 }
 
 .hero{
 
-height:70vh;
-
 background:
 linear-gradient(
-rgba(0,0,0,.4),
-rgba(0,0,0,.6)
+rgba(0,0,0,.55),
+rgba(0,0,0,.65)
 ),
-url("yaizu.jpg");
+url("kawasaki-top.jpg");
 
 background-size:cover;
 background-position:center;
 
-display:flex;
-justify-content:center;
-align-items:center;
+padding:120px 20px;
 
 text-align:center;
 
 color:white;
 
-padding:30px;
-
 }
 
 .hero h1{
-
-font-size:80px;
-
+font-size:60px;
 margin-bottom:20px;
-
 }
 
 .hero p{
-
 font-size:24px;
-
+color:#ddd;
 }
 
-.section{
+.container{
 
-max-width:1100px;
+max-width:1200px;
 
 margin:auto;
 
-padding:100px 30px;
+padding:80px 20px;
 
 }
 
-.title{
+.grid{
 
-font-size:42px;
+display:grid;
 
-margin-bottom:30px;
+grid-template-columns:1fr 1fr;
 
-position:relative;
-
-}
-
-.title::after{
-
-content:"";
-
-display:block;
-
-width:80px;
-height:4px;
-
-background:#6DB33F;
-
-margin-top:15px;
+gap:30px;
 
 }
 
-.lead{
+.card{
 
-font-size:22px;
+background:white;
 
-color:#555;
+padding:40px;
+
+border-radius:20px;
+
+text-decoration:none;
+
+color:#222;
+
+transition:.3s;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.card h2{
+
+color:#6DB33F;
+
+margin-bottom:15px;
+
+font-size:32px;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#666;
 
 }
 
@@ -110,136 +120,37 @@ background:#111;
 
 color:white;
 
-padding:100px 30px;
+padding:50px;
 
 text-align:center;
 
-}
-
-.quote h2{
-
-font-size:42px;
-
-margin-bottom:30px;
-
-}
-
-.quote p{
-
-font-size:24px;
-
-max-width:900px;
-
-margin:auto;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-margin-top:40px;
-
-}
-
-.card{
-
-background:white;
-
-padding:35px;
-
-border-radius:20px;
-
-box-shadow:
-0 8px 25px rgba(0,0,0,.05);
-
-}
-
-.card h3{
-
-color:#6DB33F;
-
 font-size:28px;
 
-margin-bottom:15px;
+font-weight:bold;
 
-}
-
-.timeline{
+border-radius:20px;
 
 margin-top:50px;
 
 }
 
-.step{
+.back{
 
-background:white;
+display:flex;
 
-padding:35px;
-
-margin-bottom:20px;
-
-border-radius:20px;
-
-box-shadow:
-0 8px 25px rgba(0,0,0,.05);
-
-}
-
-.step h3{
-
-font-size:28px;
-
-margin-bottom:10px;
-
-}
-
-.support{
-
-background:#111;
-
-color:white;
-
-padding:80px 40px;
-
-border-radius:30px;
+justify-content:space-between;
 
 margin-top:60px;
 
-}
-
-.support h2{
-
-font-size:42px;
-
-margin-bottom:20px;
+gap:20px;
 
 }
 
-.support p{
-
-font-size:20px;
-
-}
-
-.next{
-
-padding:100px 30px;
-
-text-align:center;
-
-}
-
-.next a{
+.back a{
 
 display:inline-block;
 
-padding:18px 50px;
+padding:18px 35px;
 
 background:#6DB33F;
 
@@ -247,283 +158,151 @@ color:white;
 
 text-decoration:none;
 
-border-radius:50px;
+border-radius:10px;
 
 font-weight:bold;
-
-}
-
-.back{
-
-position:fixed;
-
-top:20px;
-
-left:20px;
-
-background:white;
-
-padding:12px 20px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-color:#222;
-
-box-shadow:
-0 5px 15px rgba(0,0,0,.1);
-
-z-index:999;
 
 }
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:50px;
+font-size:40px;
 }
 
 .hero p{
 font-size:18px;
 }
 
-.title{
-font-size:32px;
+.grid{
+grid-template-columns:1fr;
 }
 
-.quote h2{
-font-size:32px;
+.back{
+flex-direction:column;
 }
 
-.quote p{
-font-size:18px;
+.quote{
+font-size:22px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<a href="kawasaki.html" class="back">
-← 戻る
-</a>
-
 <section class="hero">
-
-<div>
 
 <h1>コンシェルジュ</h1>
 
 <p>
 
-お客様の期待を感動へ変える仕事
-
-</p>
-
-</div>
-
-</section>
-
-<section class="quote">
-
-<h2>
-
-コンシェルジュとは
-
-</h2>
-
-<p>
-
-私たちの仕事はバイクを売ることではありません。
-
-モーターサイクルライフを豊かにすることです。
-
-コンシェルジュは、お客様とパドックグループを繋ぐ大切な存在です。
+お客様の期待を超える接客を目指す
 
 </p>
 
 </section>
 
-<section class="section">
-
-<h2 class="title">
-コンシェルジュに必要な力
-</h2>
+<div class="container">
 
 <div class="grid">
 
-<div class="card">
-<h3>気づく力</h3>
-<p>
-お客様や仲間の変化に気づく。
-</p>
-</div>
+<a href="concierge-customer.html" class="card">
 
-<div class="card">
-<h3>聴く力</h3>
-<p>
-話すより先に、まず聴く。
-</p>
-</div>
-
-<div class="card">
-<h3>伝える力</h3>
-<p>
-正しく分かりやすく伝える。
-</p>
-</div>
-
-<div class="card">
-<h3>感謝する力</h3>
-<p>
-感謝を言葉で伝える。
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="title">
-お客様との流れ
-</h2>
-
-<div class="timeline">
-
-<div class="step">
-
-<h3>① 受付</h3>
+<h2>接客の基本</h2>
 
 <p>
 
-来店された瞬間から接客は始まっています。
+お客様の気持ちを理解する。
 
-笑顔・挨拶・お出迎えを大切にします。
-
-</p>
-
-</div>
-
-<div class="step">
-
-<h3>② 商談</h3>
-
-<p>
-
-商品説明をするのではなく、
-
-お客様がどんなバイクライフを送りたいかを聞きます。
+興味を引き出し、
+信頼関係を築くための基本。
 
 </p>
 
-</div>
-
-<div class="step">
-
-<h3>③ 納車</h3>
-
-<p>
-
-納車はゴールではありません。
-
-お客様との新しいスタートです。
-
-</p>
-
-</div>
-
-<div class="step">
-
-<h3>④ アフターフォロー</h3>
-
-<p>
-
-購入後こそ本当のお付き合いの始まりです。
-
-困った時に真っ先に思い出していただける存在を目指します。
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="support">
-
-<h2>
-
-オーナーサポートガイド
-
-</h2>
-
-<p>
-
-車両を販売するだけではなく、
-
-安全で楽しいモーターサイクルライフをサポートすることが私たちの使命です。
-
-お客様との関係は納車で終わりません。
-
-むしろそこからが本当のスタートです。
-
-</p>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="title">
-パドックで大切にすること
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>元気な挨拶</h3>
-<p>第一印象を決める。</p>
-</div>
-
-<div class="card">
-<h3>時間を守る</h3>
-<p>信頼を積み重ねる。</p>
-</div>
-
-<div class="card">
-<h3>報連相</h3>
-<p>チームでお客様を支える。</p>
-</div>
-
-<div class="card">
-<h3>気づく力</h3>
-<p>期待を超える接客へ。</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="next">
-
-<h2 style="margin-bottom:30px;">
-次のステップ
-</h2>
-
-<a href="knowledge.html">
-車両知識へ進む
 </a>
 
-</section>
+<a href="concierge-sales.html" class="card">
+
+<h2>商談の基本</h2>
+
+<p>
+
+見積作成。
+
+オーナーサポート説明。
+
+不安解消。
+
+購入への導き方を学ぶ。
+
+</p>
+
+</a>
+
+<a href="concierge-delivery.html" class="card">
+
+<h2>納車の基本</h2>
+
+<p>
+
+お客様の喜びが最高潮になる瞬間。
+
+感動を届ける納車を学ぶ。
+
+</p>
+
+</a>
+
+<a href="concierge-other.html" class="card">
+
+<h2>その他</h2>
+
+<p>
+
+SNS。
+
+イベント。
+
+紹介活動。
+
+アフターフォロー。
+
+コンシェルジュとして必要な知識。
+
+</p>
+
+</a>
+
+</div>
+
+<div class="quote">
+
+お客様は商品だけではなく、
+担当者から購入する。
+
+</div>
+
+<div class="back">
+
+<a href="basic-action.html">
+
+← パドックの基本行動
+
+</a>
+
+<a href="technician.html">
+
+テクニシャンへ →
+
+</a>
+
+</div>
+
+</div>
 
 </body>
 </html>
