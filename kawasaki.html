@@ -17,240 +17,139 @@ font-family:"Yu Gothic",sans-serif;
 }
 
 body{
-background:#f8f8f8;
+background:#f5f5f5;
 color:#222;
-line-height:1.8;
 }
 
 .hero{
 
-height:80vh;
-
 background:
 linear-gradient(
-rgba(0,0,0,.35),
-rgba(0,0,0,.55)
+rgba(0,0,0,.55),
+rgba(0,0,0,.65)
 ),
-url("yaizu.jpg");
+url("kawasaki-top.jpg");
 
 background-size:cover;
 background-position:center;
 
+height:50vh;
+
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 
-text-align:center;
-
 color:white;
-
-padding:30px;
-
+text-align:center;
 }
 
 .hero h1{
-
-font-size:80px;
-
-margin-bottom:20px;
-
+font-size:60px;
+letter-spacing:4px;
+margin-bottom:10px;
 }
 
 .hero p{
-
-font-size:24px;
-
-max-width:700px;
-
+font-size:20px;
+opacity:.9;
 }
 
 .container{
-
-max-width:1200px;
-
+max-width:1100px;
 margin:auto;
-
-padding:100px 30px;
-
+padding:60px 20px;
 }
 
-.intro{
-
-text-align:center;
-
-margin-bottom:80px;
-
+.section-title{
+font-size:34px;
+margin-bottom:15px;
 }
 
-.intro h2{
-
-font-size:42px;
-
-margin-bottom:20px;
-
-}
-
-.intro p{
-
-font-size:20px;
-
+.section-sub{
 color:#666;
-
-max-width:900px;
-
-margin:auto;
-
+margin-bottom:40px;
 }
 
-.menu{
+.grid{
 
 display:grid;
+grid-template-columns:1fr 1fr;
 
-grid-template-columns:
-repeat(auto-fit,minmax(300px,1fr));
-
-gap:30px;
-
+gap:25px;
 }
 
 .card{
 
 background:white;
 
-padding:40px;
+padding:35px;
 
-border-radius:25px;
+border-radius:20px;
 
 text-decoration:none;
 
 color:#222;
 
 box-shadow:
-0 10px 25px rgba(0,0,0,.08);
+0 5px 20px rgba(0,0,0,.08);
 
 transition:.3s;
-
 }
 
 .card:hover{
 
-transform:translateY(-8px);
-
-}
-
-.number{
-
-color:#6DB33F;
-
-font-weight:bold;
-
-margin-bottom:15px;
+transform:translateY(-5px);
 
 }
 
 .card h3{
 
-font-size:32px;
+font-size:28px;
 
-margin-bottom:15px;
+margin-bottom:10px;
+
+color:#6DB33F;
 
 }
 
 .card p{
 
+line-height:1.8;
+
 color:#666;
-
-}
-
-.message{
-
-margin-top:100px;
-
-background:white;
-
-padding:70px;
-
-border-radius:30px;
-
-text-align:center;
-
-box-shadow:
-0 10px 25px rgba(0,0,0,.08);
-
-}
-
-.message h2{
-
-font-size:42px;
-
-margin-bottom:30px;
-
-}
-
-.message p{
-
-font-size:22px;
-
-max-width:800px;
-
-margin:auto;
 
 }
 
 .back{
 
-position:fixed;
+display:inline-block;
 
-top:20px;
+margin-top:50px;
 
-left:20px;
+padding:15px 35px;
 
-background:white;
+background:#111;
 
-padding:12px 20px;
-
-border-radius:50px;
+color:white;
 
 text-decoration:none;
 
-color:#222;
-
-box-shadow:
-0 5px 15px rgba(0,0,0,.1);
-
-z-index:999;
+border-radius:10px;
 
 }
 
 @media(max-width:768px){
 
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
 .hero h1{
 
-font-size:48px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-.intro h2{
-
-font-size:32px;
-
-}
-
-.message h2{
-
-font-size:32px;
-
-}
-
-.message p{
-
-font-size:18px;
+font-size:40px;
 
 }
 
@@ -262,65 +161,38 @@ font-size:18px;
 
 <body>
 
-<a href="brand.html" class="back">
-← 戻る
-</a>
-
 <section class="hero">
-
-<div>
 
 <h1>KAWASAKI ACADEMY</h1>
 
 <p>
-
-カワサキを学び、
-お客様の人生を豊かにする。
-
+Kawasakiを知り、
+パドックの考え方を学ぶ
 </p>
-
-</div>
 
 </section>
 
 <div class="container">
 
-<div class="intro">
-
-<h2>
+<h2 class="section-title">
 学習コンテンツ
 </h2>
 
-<p>
-
-知識を覚えるだけではなく、
-なぜそうするのかを理解する。
-
-パドックグループらしい考え方と行動を
-身につけていきましょう。
-
+<p class="section-sub">
+理念を実践するための基礎を学びます。
 </p>
 
-</div>
-
-<div class="menu">
+<div class="grid">
 
 <a href="kawasaki-about.html" class="card">
 
-<div class="number">
-01
-</div>
-
-<h3>
-カワサキを知る
-</h3>
+<h3>Kawasakiとは</h3>
 
 <p>
 
-カワサキとはどんな会社なのか。
-
-神戸第一ドック、
-カワサキプラザについて学びます。
+Kawasakiの歴史、
+ものづくりへの想い、
+ブランドの価値を学びます。
 
 </p>
 
@@ -328,37 +200,12 @@ font-size:18px;
 
 <a href="phone.html" class="card">
 
-<div class="number">
-02
-</div>
-
-<h3>
-電話対応
-</h3>
+<h3>電話対応</h3>
 
 <p>
 
-お店の第一印象を決める
-電話対応について学びます。
-
-</p>
-
-</a>
-
-<a href="knowledge.html" class="card">
-
-<div class="number">
-03
-</div>
-
-<h3>
-車両知識
-</h3>
-
-<p>
-
-主要モデルや特徴、
-提案の考え方を学びます。
+誠意を伝える第一歩。
+パドック基準の電話応対を学びます。
 
 </p>
 
@@ -366,18 +213,41 @@ font-size:18px;
 
 <a href="concierge.html" class="card">
 
-<div class="number">
-04
-</div>
-
-<h3>
-コンシェルジュ
-</h3>
+<h3>コンシェルジュ</h3>
 
 <p>
 
-受付・商談・納車・
-オーナーサポートについて学びます。
+接客・商談・納車まで。
+
+信頼を築くための基本を学びます。
+
+</p>
+
+</a>
+
+<a href="complaint.html" class="card">
+
+<h3>クレーム対応</h3>
+
+<p>
+
+誠意が最も試される瞬間。
+
+信頼を守る対応を学びます。
+
+</p>
+
+</a>
+
+<a href="basic-action.html" class="card">
+
+<h3>パドックの基本行動</h3>
+
+<p>
+
+挨拶・時間厳守・報連相・整理整頓・気づく力。
+
+全社員共通の行動基準です。
 
 </p>
 
@@ -385,18 +255,13 @@ font-size:18px;
 
 <a href="technician.html" class="card">
 
-<div class="number">
-05
-</div>
-
-<h3>
-テクニシャン
-</h3>
+<h3>テクニシャン</h3>
 
 <p>
 
-納車整備・定期点検・
-カスタムについて学びます。
+準備中
+
+工場長と共に内容を作成予定です。
 
 </p>
 
@@ -404,26 +269,11 @@ font-size:18px;
 
 </div>
 
-<div class="message">
+<a href="brand.html" class="back">
 
-<h2>
+← ブランド選択へ戻る
 
-私たちの仕事
-
-</h2>
-
-<p>
-
-私たちはバイクを販売する仕事ではありません。
-
-モーターサイクルライフを豊かにする仕事です。
-
-お客様の期待を超える体験を届けるために、
-学び続けましょう。
-
-</p>
-
-</div>
+</a>
 
 </div>
 
