@@ -258,16 +258,35 @@ font-weight:bold;
 
 </div>`;
 
-}else{
+if(score >= 8){
 
 result.innerHTML =
-`<div class="fail">
-不合格 ${score}/10 <br><br>
-もう一度フィロソフィーを読み返しましょう。
+`<div class="pass">
+
+合格！ ${score}/10
+
+<br><br>
+
+次のステージへ進みましょう。
+
+<br><br>
+
+<a href="next-stage.html"
+style="
+display:inline-block;
+padding:15px 30px;
+background:#6DB33F;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-size:20px;
+font-weight:bold;
+">
+
+▶ ブランド選択へ進む
+
+</a>
 
 </div>`;
-
 }
 
-</body>
-</html>
