@@ -157,31 +157,66 @@ text-decoration:none;
 <script>
 function checkTest(){
 
-let score=0;
+let score = 0;
 
 for(let i=1;i<=8;i++){
-let ans=document.querySelector('input[name="q'+i+'"]:checked');
+
+let ans =
+document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
 if(ans){
-score+=Number(ans.value);
+
+score += Number(ans.value);
+
 }
+
 }
 
-let result=document.getElementById("result");
+let result =
+document.getElementById("result");
 
-if(score>=6){
+if(score >= 6){
 
-localStorage.setItem("kawasaki-concierge-test","pass");
+const user =
+localStorage.getItem("currentUser");
 
-result.innerHTML="✅ 合格！<br>"+score+" / 8";
+if(user){
+
+localStorage.setItem(
+user + "_basic",
+"pass"
+);
+
+}
+
+result.innerHTML =
+
+"✅ 合格！<br>" +
+
+score +
+
+" / 8" +
+
+"<br><br>" +
+
+"ブランド理解を修了しました。" +
+
+"<br><br>" +
+
+'<a href="concierge.html" style="display:inline-block;padding:15px 30px;background:#0B8F3C;color:white;text-decoration:none;border-radius:10px;">▶ 次へ進む</a>';
 
 }else{
 
-result.innerHTML="❌ 不合格<br>"+score+" / 8";
+result.innerHTML =
+
+"❌ 不合格<br>" +
+
+score +
+
+" / 8";
 
 }
 
 }
-</script>
-
-</body>
-</html>
