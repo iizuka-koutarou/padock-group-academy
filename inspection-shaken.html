@@ -1,11 +1,122 @@
+<!-- inspection-shaken.html -->
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>車検整備</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
+body{
+background:
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.85)
+),
+url("paddock-top.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+}
+
+.hero{
+padding:120px 20px 80px;
+text-align:center;
+}
+
+.hero h1{
+font-size:68px;
+color:#6CFF6C;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+line-height:1.8;
+color:#ddd;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 25px 80px;
+}
+
+.section{
+background:white;
+color:#222;
+padding:40px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.section h2{
+color:#0B8F3C;
+margin-bottom:20px;
+}
+
+.section p,
+.section li{
+line-height:2;
+}
+
+.quote{
+background:rgba(11,143,60,.25);
+padding:40px;
+border-radius:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+margin-bottom:25px;
+}
+
+.list{
+padding-left:20px;
+}
+
+.btns{
+text-align:center;
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
+padding:18px 50px;
+background:#0B8F3C;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+margin:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
 <section class="hero">
 
 <h1>車検整備</h1>
 
 <p>
 
-車検は通過点。
-本当の目的は安全である。
+車検は通すためではない。<br>
+安全を確認するためにある。
 
 </p>
 
@@ -19,15 +130,10 @@
 
 <p>
 
-車検とは、
+車検は国が定める保安基準に適合しているかを確認する制度です。<br><br>
 
-国が定める保安基準に適合しているかを確認する検査です。
-
-しかし、
-
-車検に合格することが目的ではありません。
-
-お客様が安心して乗り続けられる状態を維持することが本来の目的です。
+しかし本当に大切なのは、
+お客様が安心して乗り続けられる状態を維持することです。
 
 </p>
 
@@ -35,103 +141,53 @@
 
 <div class="quote">
 
-車検はゴールではない。
-
-次の2年間を安心して走るための準備である。
-
-</div>
-
-<div class="section">
-
-<h2>車検整備で確認すること</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>ブレーキ</h3>
-
-<p>
-
-パッド残量
-
-フルード状態
-
-作動確認
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>タイヤ</h3>
-
-<p>
-
-残り溝
-
-ひび割れ
-
-空気圧
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>足回り</h3>
-
-<p>
-
-ステアリング
-
-サスペンション
-
-ベアリング
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>灯火類</h3>
-
-<p>
-
-ヘッドライト
-
-ウインカー
-
-ブレーキランプ
-
-</p>
-
-</div>
-
-</div>
+車検はゴールではなく、<br>
+次の2年間のスタート。
 
 </div>
 
 <div class="section">
 
-<h2>保安基準とは</h2>
+<h2>法定点検との違い</h2>
+
+<ul class="list">
+
+<li>車検：保安基準適合の確認</li>
+
+<li>法定点検：故障予防・安全維持</li>
+
+</ul>
 
 <p>
 
-保安基準とは、
-
-道路を安全に走行するために定められたルールです。
-
-テクニシャンは、
-
-なぜその基準が存在するのかを理解し、
-
-お客様へ説明できることが大切です。
+どちらも重要であり、
+片方だけでは十分ではありません。
 
 </p>
+
+</div>
+
+<div class="section">
+
+<h2>車検時に確認すること</h2>
+
+<ul class="list">
+
+<li>ブレーキ</li>
+
+<li>タイヤ</li>
+
+<li>サスペンション</li>
+
+<li>灯火類</li>
+
+<li>排気ガス</li>
+
+<li>ステアリング</li>
+
+<li>各部ガタ・緩み</li>
+
+</ul>
 
 </div>
 
@@ -141,13 +197,11 @@
 
 <p>
 
-整備内容を専門用語だけで説明してはいけません。
+なぜ交換が必要なのか。<br>
+なぜ整備が必要なのか。<br><br>
 
-なぜ交換が必要なのか。
-
-なぜ整備をおすすめするのか。
-
-お客様が理解できる言葉で説明しましょう。
+専門用語ではなく、
+お客様に伝わる言葉で説明することが重要です。
 
 </p>
 
@@ -155,85 +209,38 @@
 
 <div class="section">
 
-<h2>よくある失敗</h2>
+<h2>テクニシャンに求められること</h2>
 
-<div class="grid">
+<ul class="list">
 
-<div class="card">
+<li>正確な点検</li>
 
-<h3>説明不足</h3>
+<li>正しい判断</li>
 
-<p>
+<li>分かりやすい説明</li>
 
-整備内容が伝わっていない。
+<li>安全への責任感</li>
 
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>専門用語ばかり使う</h3>
-
-<p>
-
-お客様が理解できない。
-
-</p>
+</ul>
 
 </div>
 
-<div class="card">
+<div class="quote">
 
-<h3>確認不足</h3>
-
-<p>
-
-見落としによる再入庫。
-
-</p>
+技術だけでは足りない。<br>
+説明できて初めてプロ。
 
 </div>
 
-<div class="card">
+<div class="btns">
 
-<h3>提案不足</h3>
+<a href="inspection.html" class="btn">
 
-<p>
+← 点検作業
 
-必要な整備を伝えられない。
+</a>
 
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>パドックの考え方</h2>
-
-<p>
-
-車検は単なる検査ではありません。
-
-お客様の愛車を預かり、
-
-次の2年間を安心して楽しんでいただくための整備です。
-
-だからこそ、
-
-丁寧な点検と丁寧な説明が必要です。
-
-</p>
-
-</div>
-
-<div class="next">
-
-<a href="diagnosis.html">
+<a href="diagnosis.html" class="btn">
 
 故障診断へ進む →
 
@@ -241,20 +248,7 @@
 
 </div>
 
-<div style="display:flex;justify-content:space-between;margin-top:50px;">
-
-<a href="inspection.html">
-
-← 点検作業
-
-</a>
-
-<a href="kawasaki.html">
-
-🏠 KAWASAKI ACADEMY
-
-</a>
-
 </div>
 
-</div>
+</body>
+</html>
