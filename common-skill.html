@@ -3,28 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>共通スキル | PADOCK GROUP ACADEMY</title>
+<title>共通スキル</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Yu Gothic",sans-serif;}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
 body{
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),url('paddock-top.jpg');
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+url("paddock-top.jpg");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
 color:white;
 }
-.container{max-width:1100px;margin:auto;padding:80px 30px;}
-.hero{text-align:center;margin-bottom:60px;}
-.hero h1{font-size:64px;margin-bottom:20px;}
-.hero p{font-size:22px;color:#ddd;line-height:1.8;}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:100px 30px;
+}
+
+.hero{
+text-align:center;
+margin-bottom:70px;
+}
+
+.hero h1{
+font-size:64px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+color:#ddd;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
 
 .card{
-background:rgba(255,255,255,.96);
+background:rgba(255,255,255,.95);
 color:#222;
 padding:35px;
 border-radius:20px;
-margin-bottom:25px;
-box-shadow:0 5px 20px rgba(0,0,0,.15);
+text-decoration:none;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-bottom:5px solid #1F3A5F;
 }
 
 .card h2{
@@ -32,154 +70,84 @@ color:#1F3A5F;
 margin-bottom:15px;
 }
 
-.skill-box{
-padding:20px 0;
-border-bottom:1px solid #ddd;
-}
-
-.skill-box:last-child{
-border-bottom:none;
-}
-
-.skill-box h3{
-color:#1F3A5F;
-margin-bottom:10px;
-font-size:24px;
-}
-
-.skill-box p{
+.card p{
 line-height:1.8;
 color:#666;
 }
 
-.quote{
-background:rgba(0,0,0,.65);
-padding:40px;
-border-radius:20px;
-text-align:center;
-font-size:26px;
-font-weight:bold;
-margin:30px 0;
-}
-
-.menu-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-margin-top:30px;
-}
-
-.menu-card{
-background:rgba(255,255,255,.96);
-padding:30px;
-border-radius:20px;
-text-decoration:none;
-color:#222;
-transition:.3s;
-}
-
-.menu-card:hover{
-transform:translateY(-5px);
-border-bottom:5px solid #1F3A5F;
-}
-
-.menu-card h3{
-color:#1F3A5F;
-margin-bottom:10px;
-}
-
-.btn-area{
-text-align:center;
-margin-top:40px;
-}
-
 .back{
-display:inline-block;
-margin-top:20px;
+display:block;
+text-align:center;
+margin-top:50px;
 color:white;
 text-decoration:none;
 }
 
-@media(max-width:768px){
-.hero h1{font-size:42px;}
-.hero p{font-size:18px;}
-}
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
 <div class="hero">
+
 <h1>共通スキル</h1>
+
 <p>
-すべてのスタッフに必要な<br>
-社会人としての基本を学びます。
+
+すべての職種に共通する
+社会人としての基本スキル
+
 </p>
-</div>
 
-<div class="card">
-
-<h2>学習内容</h2>
-
-<div class="skill-box">
-<h3>① 社会人として</h3>
-<p>
-挨拶・お辞儀・名刺交換・お出迎え・お見送り・報連相
-</p>
-</div>
-
-<div class="skill-box">
-<h3>② 電話対応</h3>
-<p>
-電話応対の基本・保留・取次・折り返し対応
-</p>
-</div>
-
-<div class="skill-box">
-<h3>③ クレーム対応</h3>
-<p>
-期待回復対応・傾聴・謝罪・再発防止
-</p>
-</div>
-
-</div>
-
-<div class="quote">
-社会人としての基本が、<br>
-お客様からの信頼につながる。
 </div>
 
 <div class="menu-grid">
 
-<a href="social-basic.html" class="menu-card">
-<h3>社会人として</h3>
+<a href="social-basic.html" class="card">
+
+<h2>社会人として</h2>
+
 <p>
-信頼される社会人としての基礎を学ぶ
+
+名刺交換・お辞儀・お出迎え・お見送り
+
 </p>
+
 </a>
 
-<a href="phone.html" class="menu-card">
-<h3>電話対応</h3>
+<a href="phone.html" class="card">
+
+<h2>電話対応</h2>
+
 <p>
+
 電話応対の基本を学ぶ
+
 </p>
+
 </a>
 
-<a href="complaint.html" class="menu-card">
-<h3>クレーム対応</h3>
+<a href="complaint.html" class="card">
+
+<h2>クレーム対応</h2>
+
 <p>
-期待回復対応について学ぶ
+
+期待回復対応を学ぶ
+
 </p>
+
 </a>
 
 </div>
 
-<div class="btn-area">
 <a href="welcome.html" class="back">
+
 ← Academy TOPへ戻る
+
 </a>
-</div>
 
 </div>
 
