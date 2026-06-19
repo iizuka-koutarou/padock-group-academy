@@ -9,6 +9,30 @@
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.75)
+),
+url("kawasaki-top.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+
+}
+
 .home-header{
 padding:20px;
 background:#111;
@@ -21,140 +45,147 @@ font-weight:bold;
 font-size:18px;
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Yu Gothic",sans-serif;
-}
+.container{
 
-body{
-background:#f5f5f5;
-color:#222;
+max-width:1200px;
+
+margin:auto;
+
+padding:80px 30px;
+
 }
 
 .hero{
 
-background:
-linear-gradient(
-rgba(0,0,0,.55),
-rgba(0,0,0,.65)
-),
-url("kawasaki-top.jpg");
-
-background-size:cover;
-background-position:center;
-
-height:50vh;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-color:white;
 text-align:center;
+
+margin-bottom:80px;
 
 }
 
 .hero h1{
-font-size:60px;
-letter-spacing:4px;
-margin-bottom:10px;
+
+font-size:70px;
+
+margin-bottom:20px;
+
 }
 
 .hero p{
-font-size:20px;
-opacity:.9;
+
+font-size:22px;
+
+color:#ddd;
+
 }
 
-.container{
-max-width:1100px;
+.map{
+
+max-width:900px;
+
 margin:auto;
-padding:60px 20px;
-}
-
-.section-title{
-font-size:34px;
-margin-bottom:15px;
-}
-
-.section-sub{
-color:#666;
-margin-bottom:40px;
-}
-
-.grid{
-
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
 
 }
 
-.card{
+.node{
 
-background:white;
-padding:35px;
-border-radius:20px;
-text-decoration:none;
+background:rgba(255,255,255,.95);
+
 color:#222;
 
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
 box-shadow:
-0 5px 20px rgba(0,0,0,.08);
+0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.node h2{
+
+color:#1F3A5F;
+
+margin-bottom:10px;
+
+}
+
+.arrow{
+
+text-align:center;
+
+font-size:40px;
+
+margin:20px 0;
+
+}
+
+.branch{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+margin-top:40px;
+
+}
+
+.branch-box{
+
+background:rgba(255,255,255,.95);
+
+color:#222;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.branch-box h2{
+
+text-align:center;
+
+color:#1F3A5F;
+
+margin-bottom:30px;
+
+}
+
+.lesson{
+
+display:block;
+
+background:#f5f5f5;
+
+padding:18px;
+
+margin-bottom:15px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+color:#222;
+
+font-weight:bold;
 
 transition:.3s;
 
 }
 
-.card:hover{
+.lesson:hover{
 
-transform:translateY(-5px);
-
-}
-
-.card h3{
-
-font-size:28px;
-margin-bottom:10px;
-color:#6DB33F;
-
-}
-
-.card p{
-
-line-height:1.8;
-color:#666;
-
-}
-
-.back{
-
-display:inline-block;
-
-margin-top:50px;
-
-padding:15px 35px;
-
-background:#111;
+background:#1F3A5F;
 
 color:white;
-
-text-decoration:none;
-
-border-radius:10px;
-
-}
-
-@media(max-width:768px){
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:40px;
-}
 
 }
 
@@ -174,93 +205,130 @@ font-size:40px;
 
 </header>
 
-<section class="hero">
+<div class="container">
+
+<div class="hero">
 
 <h1>KAWASAKI ACADEMY</h1>
 
 <p>
 
-Kawasakiを知り、
-ブランドの価値を伝える。
+Kawasakiブランドと職種ごとの専門知識を学ぶ
 
 </p>
 
-</section>
+</div>
 
-<div class="container">
+<div class="map">
 
-<h2 class="section-title">
-学習コンテンツ
-</h2>
+<div class="node">
 
-<p class="section-sub">
-
-Kawasakiブランドと
-パドックグループの行動基準を学びます。
-
-</p>
-
-<div class="grid">
-
-<a href="kawasaki-about.html" class="card">
-
-<h3>Kawasakiとは</h3>
+<h2>Kawasakiとは</h2>
 
 <p>
 
-Kawasakiの歴史、
-ものづくりへの想い、
-ブランドの価値を学びます。
+世界を支える総合重工メーカーの歴史と価値を学ぶ
 
 </p>
 
-</a>
+<br>
 
-<a href="concierge.html" class="card">
+<a href="kawasaki-about.html"
+class="lesson">
 
-<h3>コンシェルジュ</h3>
-
-<p>
-
-接客・商談・納車まで。
-
-信頼を築くための基本を学びます。
-
-</p>
-
-</a>
-
-<a href="technician.html" class="card">
-
-<h3>テクニシャン</h3>
-
-<p>
-
-近日公開
-
-工場長と共に内容を作成予定です。
-
-</p>
-
-</a>
-
-<a href="basic-action.html" class="card">
-
-<h3>パドックの基本行動</h3>
-
-<p>
-
-挨拶・時間厳守・報連相・整理整頓・気づく力。
-
-全社員共通の行動基準です。
-
-</p>
+学習を開始する
 
 </a>
 
 </div>
 
-<a href="next-stage.html" class="back">
+<div class="arrow">
+
+↓
+
+</div>
+
+<div class="branch">
+
+<div class="branch-box">
+
+<h2>コンシェルジュ</h2>
+
+<a href="customer-service.html" class="lesson">
+
+接客の基本
+
+</a>
+
+<a href="sales-talk.html" class="lesson">
+
+商談
+
+</a>
+
+<a href="delivery.html" class="lesson">
+
+納車
+
+</a>
+
+<a href="other-concierge.html" class="lesson">
+
+その他
+
+</a>
+
+</div>
+
+<div class="branch-box">
+
+<h2>テクニシャン</h2>
+
+<a href="inspection.html" class="lesson">
+
+点検
+
+</a>
+
+<a href="vehicle-inspection.html" class="lesson">
+
+車検
+
+</a>
+
+<a href="diagnosis.html" class="lesson">
+
+故障診断
+
+</a>
+
+<a href="other-technician.html" class="lesson">
+
+その他
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div style="
+text-align:center;
+margin-top:80px;
+">
+
+<a href="next-stage.html"
+style="
+display:inline-block;
+padding:18px 40px;
+background:#1F3A5F;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+">
 
 ← ブランド選択へ戻る
 
@@ -268,5 +336,34 @@ Kawasakiの歴史、
 
 </div>
 
+</div>
+
+<style>
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.branch{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
 </body>
+
 </html>
