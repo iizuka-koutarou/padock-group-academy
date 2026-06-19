@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Academy 管理者ページ</title>
+<title>PADOCK GROUP ACADEMY 管理者ページ</title>
 
 <style>
 
@@ -20,13 +20,14 @@ body{
 background:
 linear-gradient(
 rgba(0,0,0,.60),
-rgba(0,0,0,.80)
+rgba(0,0,0,.85)
 ),
 url("paddock-top.jpg");
 
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
+
 color:white;
 }
 
@@ -53,7 +54,7 @@ color:#ddd;
 .employee-card{
 
 background:
-rgba(255,255,255,.95);
+rgba(255,255,255,.96);
 
 color:#222;
 
@@ -64,7 +65,7 @@ border-radius:20px;
 margin-bottom:25px;
 
 box-shadow:
-0 5px 20px rgba(0,0,0,.2);
+0 10px 30px rgba(0,0,0,.15);
 
 }
 
@@ -76,15 +77,15 @@ font-weight:bold;
 
 color:#1F3A5F;
 
-margin-bottom:15px;
+margin-bottom:10px;
 
 }
 
 .login-date{
 
-margin-bottom:20px;
-
 color:#666;
+
+margin-bottom:20px;
 
 }
 
@@ -100,18 +101,30 @@ border-bottom:1px solid #eee;
 
 }
 
-.back{
+.test-row:last-child{
+border-bottom:none;
+}
 
-display:block;
+.back-btn{
 
-text-align:center;
+display:inline-block;
 
-margin-top:40px;
+margin-top:30px;
+
+padding:15px 30px;
+
+background:#1F3A5F;
 
 color:white;
 
 text-decoration:none;
 
+border-radius:10px;
+
+}
+
+.center{
+text-align:center;
 }
 
 </style>
@@ -127,9 +140,7 @@ text-decoration:none;
 <h1>👨‍💼 管理者ページ</h1>
 
 <p>
-
 社員の学習状況を確認
-
 </p>
 
 </div>
@@ -138,11 +149,16 @@ text-decoration:none;
 
 </div>
 
-<a href="welcome.html" class="back">
+<div class="center">
 
-← Academy TOPへ戻る
+<a href="welcome.html"
+class="back-btn">
+
+🏠 Academy TOPへ戻る
 
 </a>
+
+</div>
 
 </div>
 
@@ -168,7 +184,9 @@ name:"青島昇平"
 ];
 
 const area =
-document.getElementById("employee-list");
+document.getElementById(
+"employee-list"
+);
 
 employees.forEach(emp=>{
 
@@ -177,6 +195,53 @@ document.createElement("div");
 
 card.className =
 "employee-card";
+
+const common =
+localStorage.getItem(
+emp.id + "_common"
+) === "pass"
+? "✅"
+: "❌";
+
+const basic =
+localStorage.getItem(
+emp.id + "_basic"
+) === "pass"
+? "✅"
+: "❌";
+
+const concierge =
+localStorage.getItem(
+emp.id + "_concierge"
+) === "pass"
+? "✅"
+: "❌";
+
+const technician =
+localStorage.getItem(
+emp.id + "_technician"
+) === "pass"
+? "✅"
+: "❌";
+
+const sales =
+localStorage.getItem(
+emp.id + "_ducati_sales"
+) === "pass"
+? "✅"
+: "❌";
+
+const service =
+localStorage.getItem(
+emp.id + "_ducati_service"
+) === "pass"
+? "✅"
+: "❌";
+
+const lastLogin =
+localStorage.getItem(
+emp.id + "_lastlogin"
+) || "未ログイン";
 
 card.innerHTML =
 
@@ -191,29 +256,38 @@ ${emp.name}
 <div class="login-date">
 
 最終ログイン：
-
-${localStorage.getItem(emp.id + "_lastlogin") || "未ログイン"}
+${lastLogin}
 
 </div>
 
 <div class="test-row">
 <span>共通教育試験</span>
-<span>${localStorage.getItem(emp.id + "_common") === "pass" ? "✅" : "❌"}</span>
+<span>${common}</span>
 </div>
 
 <div class="test-row">
 <span>Kawasaki基礎試験</span>
-<span>${localStorage.getItem(emp.id + "_basic") === "pass" ? "✅" : "❌"}</span>
+<span>${basic}</span>
 </div>
 
 <div class="test-row">
 <span>Kawasakiコンシェルジュ試験</span>
-<span>${localStorage.getItem(emp.id + "_concierge") === "pass" ? "✅" : "❌"}</span>
+<span>${concierge}</span>
 </div>
 
 <div class="test-row">
 <span>Kawasakiテクニシャン試験</span>
-<span>${localStorage.getItem(emp.id + "_technician") === "pass" ? "✅" : "❌"}</span>
+<span>${technician}</span>
+</div>
+
+<div class="test-row">
+<span>Ducatiセールス試験</span>
+<span>${sales}</span>
+</div>
+
+<div class="test-row">
+<span>Ducatiサービス試験</span>
+<span>${service}</span>
 </div>
 
 `;
@@ -226,3 +300,4 @@ area.appendChild(card);
 
 </body>
 </html>
+```
