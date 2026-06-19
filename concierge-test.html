@@ -253,24 +253,42 @@ document.getElementById("result");
 
 if(score >= 8){
 
+const user =
+localStorage.getItem("currentUser");
+
+if(user){
+
 localStorage.setItem(
-"kawasaki-concierge-test",
+user + "_concierge",
 "pass"
 );
 
+}
+
 result.innerHTML =
-"✅ 合格！<br>" + score + " / 10";
+
+"✅ 合格！<br>" +
+
+score +
+
+" / 10" +
+
+"<br><br>" +
+
+"コンシェルジュコースを修了しました。" +
+
+"<br><br>" +
+
+'<a href="welcome.html" style="display:inline-block;padding:15px 30px;background:#0B8F3C;color:white;text-decoration:none;border-radius:10px;">🏠 Academy TOPへ戻る</a>';
 
 }else{
 
 result.innerHTML =
-"❌ 不合格<br>" + score + " / 10";
+
+"❌ 不合格<br>" +
+
+score +
+
+" / 10";
 
 }
-
-}
-
-</script>
-
-</body>
-</html>
