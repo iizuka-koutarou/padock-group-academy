@@ -1,11 +1,122 @@
+<!-- inspection.html -->
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>点検作業</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
+body{
+background:
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.85)
+),
+url("paddock-top.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+}
+
+.hero{
+padding:120px 20px 80px;
+text-align:center;
+}
+
+.hero h1{
+font-size:68px;
+color:#6CFF6C;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+line-height:1.8;
+color:#ddd;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 25px 80px;
+}
+
+.section{
+background:white;
+color:#222;
+padding:40px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.section h2{
+color:#0B8F3C;
+margin-bottom:20px;
+}
+
+.section p,
+.section li{
+line-height:2;
+}
+
+.quote{
+background:rgba(11,143,60,.25);
+padding:40px;
+border-radius:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+margin-bottom:25px;
+}
+
+.list{
+padding-left:20px;
+}
+
+.btns{
+text-align:center;
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
+padding:18px 50px;
+background:#0B8F3C;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+margin:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
 <section class="hero">
 
 <h1>点検作業</h1>
 
 <p>
 
-故障を直す前に、
-故障を防ぐ。
+点検は作業ではない。<br>
+安全確認である。
 
 </p>
 
@@ -19,17 +130,9 @@
 
 <p>
 
-点検とは、
+点検とは不具合を探す作業ではありません。<br><br>
 
-不具合が発生してから修理するための作業ではありません。
-
-安全に走行できる状態を維持し、
-
-故障やトラブルを未然に防ぐための大切な作業です。
-
-お客様が安心してバイクを楽しめるようにすること。
-
-それが点検の目的です。
+事故を防ぐために行う予防活動です。
 
 </p>
 
@@ -37,167 +140,48 @@
 
 <div class="quote">
 
-点検とは、
-
-お客様の安全を守る仕事である。
-
-</div>
-
-<div class="section">
-
-<h2>なぜ点検が必要なのか</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>安全のため</h3>
-
-<p>
-
-ブレーキやタイヤなど、
-
-命に関わる部分を確認します。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>故障予防</h3>
-
-<p>
-
-不具合の兆候を早期発見します。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>性能維持</h3>
-
-<p>
-
-本来の性能を維持します。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>安心提供</h3>
-
-<p>
-
-お客様へ安心を届けます。
-
-</p>
-
-</div>
-
-</div>
+壊れてから直すのではなく、<br>
+壊れる前に防ぐ。
 
 </div>
 
 <div class="section">
 
-<h2>主な点検項目</h2>
+<h2>点検で確認すること</h2>
 
-<div class="grid">
+<ul class="list">
 
-<div class="card">
+<li>ブレーキ</li>
 
-<h3>タイヤ</h3>
+<li>タイヤ</li>
 
-<p>
+<li>灯火類</li>
 
-空気圧
+<li>チェーン</li>
 
-残り溝
+<li>エンジンオイル</li>
 
-ひび割れ
+<li>冷却水</li>
 
-異物の有無
+<li>バッテリー</li>
 
-</p>
+<li>各部締付</li>
 
-</div>
-
-<div class="card">
-
-<h3>ブレーキ</h3>
-
-<p>
-
-パッド残量
-
-フルード量
-
-作動状態
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>灯火類</h3>
-
-<p>
-
-ヘッドライト
-
-ウインカー
-
-ブレーキランプ
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>エンジン周辺</h3>
-
-<p>
-
-オイル漏れ
-
-冷却水
-
-異音
-
-異臭
-
-</p>
-
-</div>
-
-</div>
+</ul>
 
 </div>
 
 <div class="section">
 
-<h2>安心点検と法定点検</h2>
+<h2>見落としの怖さ</h2>
 
 <p>
 
-カワサキプラザでは、
+小さな異常でも、
+重大事故につながる可能性があります。<br><br>
 
-日常的なコンディション確認を行う安心点検と、
-
-法律で定められた法定点検があります。
-
-どちらもお客様の安全を守るために欠かせない整備です。
-
-点検内容を理解し、
-
-お客様へ分かりやすく説明できるようになりましょう。
+だからこそ、
+慣れた作業ほど丁寧に確認することが重要です。
 
 </p>
 
@@ -205,85 +189,40 @@
 
 <div class="section">
 
-<h2>点検で大切なこと</h2>
+<h2>点検の基本姿勢</h2>
 
-<div class="grid">
+<ul class="list">
 
-<div class="card">
+<li>決められた手順を守る</li>
 
-<h3>見落とさない</h3>
+<li>思い込みを捨てる</li>
 
-<p>
+<li>異常を見逃さない</li>
 
-慣れによる見落としを防ぐ。
+<li>記録を残す</li>
 
-</p>
+<li>分からない時は相談する</li>
 
-</div>
-
-<div class="card">
-
-<h3>決めつけない</h3>
-
-<p>
-
-異常がないと思い込まない。
-
-</p>
+</ul>
 
 </div>
 
-<div class="card">
+<div class="quote">
 
-<h3>記録する</h3>
-
-<p>
-
-確認内容を正確に残す。
-
-</p>
+安全は偶然ではなく、<br>
+点検の積み重ねで作られる。
 
 </div>
 
-<div class="card">
+<div class="btns">
 
-<h3>説明する</h3>
+<a href="hearing-tech.html" class="btn">
 
-<p>
+← 症状ヒアリング
 
-お客様に分かりやすく伝える。
+</a>
 
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>パドックの考え方</h2>
-
-<p>
-
-点検はただの確認作業ではありません。
-
-お客様の命を預かる仕事です。
-
-見つけた異常を正しく伝え、
-
-必要な整備をご提案する。
-
-その積み重ねが信頼につながります。
-
-</p>
-
-</div>
-
-<div class="next">
-
-<a href="inspection-shaken.html">
+<a href="inspection-shaken.html" class="btn">
 
 車検整備へ進む →
 
@@ -291,20 +230,7 @@
 
 </div>
 
-<div style="display:flex;justify-content:space-between;margin-top:50px;">
-
-<a href="tech-hearing.html">
-
-← ヒアリング
-
-</a>
-
-<a href="kawasaki.html">
-
-🏠 KAWASAKI ACADEMY
-
-</a>
-
 </div>
 
-</div>
+</body>
+</html>
