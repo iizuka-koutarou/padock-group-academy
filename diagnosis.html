@@ -1,11 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>故障診断</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
+body{
+background:
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.85)
+),
+url("paddock-top.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+}
+
+.hero{
+padding:120px 20px 80px;
+text-align:center;
+}
+
+.hero h1{
+font-size:68px;
+color:#6CFF6C;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+line-height:1.8;
+color:#ddd;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 25px 80px;
+}
+
+.section{
+background:white;
+color:#222;
+padding:40px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.section h2{
+color:#0B8F3C;
+margin-bottom:20px;
+}
+
+.section p,
+.section li{
+line-height:2;
+}
+
+.quote{
+background:rgba(11,143,60,.25);
+padding:40px;
+border-radius:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+margin-bottom:25px;
+}
+
+.list{
+padding-left:20px;
+}
+
+.btns{
+text-align:center;
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
+padding:18px 50px;
+background:#0B8F3C;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+margin:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
 <section class="hero">
 
 <h1>故障診断</h1>
 
 <p>
 
-部品を交換する前に、
-原因を特定する。
+交換するのではなく、<br>
+原因を見つける。
 
 </p>
 
@@ -20,20 +128,11 @@
 <p>
 
 故障診断とは、
+壊れている部品を探すことではありません。<br><br>
 
-不具合の原因を特定する作業です。
+なぜその症状が起きたのか。
 
-症状だけを見て判断するのではなく、
-
-ヒアリング、
-
-現車確認、
-
-測定、
-
-データ確認を行い、
-
-原因を見つけ出します。
+原因を特定することです。
 
 </p>
 
@@ -41,71 +140,65 @@
 
 <div class="quote">
 
-交換する前に考える。
-
-それがテクニシャンの仕事。
+症状と原因は違う。
 
 </div>
 
 <div class="section">
 
-<h2>故障診断の流れ</h2>
+<h2>診断の流れ</h2>
 
-<div class="flow">
+<ul class="list">
 
-<div class="flow-step">
+<li>症状確認</li>
 
-① ヒアリング
+<li>ヒアリング</li>
 
-</div>
+<li>現象再現</li>
 
-<div class="flow-step">
+<li>測定・点検</li>
 
-② 症状確認
+<li>原因特定</li>
 
-</div>
+<li>修理実施</li>
 
-<div class="flow-step">
+<li>再発確認</li>
 
-③ 再現確認
-
-</div>
-
-<div class="flow-step">
-
-④ 原因の切り分け
-
-</div>
-
-<div class="flow-step">
-
-⑤ 修理実施
-
-</div>
-
-<div class="flow-step">
-
-⑥ 最終確認
-
-</div>
-
-</div>
+</ul>
 
 </div>
 
 <div class="section">
 
-<h2>再現確認の重要性</h2>
+<h2>よくある失敗</h2>
+
+<ul class="list">
+
+<li>経験だけで判断する</li>
+
+<li>部品を決めつける</li>
+
+<li>現象確認をしない</li>
+
+<li>測定を省略する</li>
+
+<li>原因追究を途中で止める</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>現象再現の重要性</h2>
 
 <p>
 
-症状を確認せずに修理してはいけません。
+症状が確認できなければ、
+正しい診断はできません。<br><br>
 
-実際に症状が発生するか。
-
-どんな条件で発生するのか。
-
-まずは現象を再現することが大切です。
+まずは現象を再現し、
+事実を確認することが重要です。
 
 </p>
 
@@ -113,119 +206,44 @@
 
 <div class="section">
 
-<h2>切り分けとは</h2>
+<h2>測定の基本</h2>
 
-<p>
+<ul class="list">
 
-故障診断で最も重要なのは切り分けです。
+<li>電圧測定</li>
 
-原因を一つずつ確認し、
+<li>抵抗測定</li>
 
-可能性を絞り込んでいきます。
+<li>導通確認</li>
+
+<li>サービスマニュアル確認</li>
+
+<li>基準値との比較</li>
+
+</ul>
+
+</div>
+
+<div class="quote">
 
 推測ではなく、
-
-根拠を持って判断することが重要です。
-
-</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>良い例</h3>
-
-<p>
-
-測定結果やデータを確認し、
-
-原因を特定する。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>悪い例</h3>
-
-<p>
-
-「たぶんこれだろう」で
-
-部品交換する。
-
-</p>
-
-</div>
+事実で判断する。
 
 </div>
 
 <div class="section">
 
-<h2>診断機の活用</h2>
+<h2>優秀なテクニシャンとは</h2>
 
 <p>
 
-現代のオートバイは電子制御化が進んでいます。
+知識が多い人ではありません。<br><br>
 
-診断機やサービスマニュアルを活用し、
+正しい手順で原因を追究できる人です。<br><br>
 
-正確な情報をもとに診断を行います。
+経験と知識と確認作業。
 
-経験だけに頼らず、
-
-データも活用することが重要です。
-
-</p>
-
-</div>
-
-<div class="section">
-
-<h2>お客様への説明</h2>
-
-<p>
-
-原因が分かったら、
-
-お客様へ分かりやすく説明します。
-
-なぜ不具合が発生したのか。
-
-どのような修理を行うのか。
-
-専門用語ばかりではなく、
-
-お客様が理解できる言葉でお伝えしましょう。
-
-</p>
-
-</div>
-
-<div class="section">
-
-<h2>パドックの考え方</h2>
-
-<p>
-
-テクニシャンは部品交換をする人ではありません。
-
-不具合の原因を探し、
-
-最適な修理方法を考え、
-
-お客様へ安心を届ける仕事です。
-
-経験。
-
-知識。
-
-技術。
-
-そのすべてを活かして診断を行います。
+その積み重ねが診断力になります。
 
 </p>
 
@@ -233,36 +251,29 @@
 
 <div class="quote">
 
-原因を見つける力が、
-
-テクニシャンの価値になる。
-
-</div>
-
-<div class="next">
-
-<a href="takumi.html">
-
-匠プログラムへ進む →
-
-</a>
+部品交換マンではなく、<br>
+診断士になれ。
 
 </div>
 
-<div style="display:flex;justify-content:space-between;margin-top:50px;">
+<div class="btns">
 
-<a href="inspection-shaken.html">
+<a href="inspection-shaken.html" class="btn">
 
 ← 車検整備
 
 </a>
 
-<a href="kawasaki.html">
+<a href="takumi-test.html" class="btn">
 
-🏠 KAWASAKI ACADEMY
+匠試験へ進む →
 
 </a>
 
 </div>
 
 </div>
+
+</body>
+
+</html>
