@@ -37,11 +37,11 @@ color:white;
 
 text-align:center;
 
-max-width:900px;
+max-width:1100px;
 
 margin:auto;
 
-padding:100px 30px 50px;
+padding:80px 30px;
 
 }
 
@@ -61,19 +61,19 @@ margin-bottom:20px;
 
 h1{
 
-font-size:70px;
+font-size:80px;
 
 font-weight:700;
 
 line-height:1.2;
 
-margin-bottom:30px;
+margin-bottom:25px;
 
 }
 
 .catch{
 
-font-size:22px;
+font-size:24px;
 
 line-height:2;
 
@@ -87,7 +87,7 @@ margin-bottom:50px;
 
 display:inline-block;
 
-padding:18px 60px;
+padding:25px 90px;
 
 background:#244A78;
 
@@ -97,13 +97,18 @@ text-decoration:none;
 
 font-weight:bold;
 
-letter-spacing:3px;
+font-size:24px;
 
-border-radius:50px;
+letter-spacing:5px;
+
+border-radius:60px;
 
 transition:.3s;
 
-margin-bottom:80px;
+margin-bottom:70px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.3);
 
 }
 
@@ -115,9 +120,50 @@ opacity:.95;
 
 }
 
+.program{
+
+margin:0 auto 50px;
+
+max-width:900px;
+
+padding:25px;
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:20px;
+
+backdrop-filter:blur(8px);
+
+}
+
+.program-title{
+
+font-size:24px;
+
+font-weight:bold;
+
+margin-bottom:15px;
+
+letter-spacing:2px;
+
+}
+
+
+  .program-flow{
+
+font-size:18px;
+
+line-height:2;
+
+color:#ddd;
+
+}
+
 .academy-title{
 
-font-size:32px;
+font-size:38px;
 
 margin-bottom:30px;
 
@@ -130,17 +176,11 @@ text-shadow:
 
 .academy-grid{
 
-max-width:1100px;
-
-margin:auto;
-
 display:grid;
 
 grid-template-columns:repeat(3,1fr);
 
 gap:25px;
-
-padding-bottom:80px;
 
 }
 
@@ -148,7 +188,7 @@ padding-bottom:80px;
 
 background:rgba(255,255,255,.96);
 
-padding:30px;
+padding:35px;
 
 border-radius:20px;
 
@@ -163,7 +203,7 @@ box-shadow:
 
 }
 
-  .academy-card:hover{
+.academy-card:hover{
 
 transform:translateY(-5px);
 
@@ -193,7 +233,7 @@ color:#666;
 @media(max-width:768px){
 
 h1{
-font-size:42px;
+font-size:48px;
 }
 
 .catch{
@@ -215,11 +255,15 @@ grid-template-columns:1fr;
 <div class="container">
 
 <div class="logo">
+
 PADOCK GROUP
+
 </div>
 
 <h1>
+
 ACADEMY
+
 </h1>
 
 <div class="catch">
@@ -230,18 +274,59 @@ ACADEMY
 </div>
 
 <a href="first-day.html" class="start-btn">
+
 START
+
 </a>
 
+<div class="program">
+
+<div class="program-title">
+
+共通教育プログラム
+
+</div>
+
+<div class="program-flow">
+
+STEP1 入社初日
+
+→
+
+STEP2 経営理念
+
+→
+
+STEP3 理解度テスト
+
+→
+
+STEP4 ブランド選択
+
+
+  <br><br>
+
+共通教育修了後
+
+↓
+
+KAWASAKI ACADEMY または DUCATI ACADEMY へ進む
+
+</div>
+
+</div>
+
 <h2 class="academy-title">
+
 ACADEMY MENU
+
 </h2>
 
 <div class="academy-grid">
 
 <a href="first-day.html" class="academy-card">
 
-<h3>入社初日</h3>
+<h3>STEP1<br>入社初日</h3>
 
 <p>
 パドックグループの考え方を学ぶ
@@ -251,7 +336,7 @@ ACADEMY MENU
 
 <a href="philosophy.html" class="academy-card">
 
-<h3>経営理念</h3>
+<h3>STEP2<br>経営理念</h3>
 
 <p>
 四方良しと理念経営を理解する
@@ -261,7 +346,7 @@ ACADEMY MENU
 
 <a href="philosophy-test.html" class="academy-card">
 
-<h3>理解度テスト</h3>
+<h3>STEP3<br>理解度テスト</h3>
 
 <p>
 フィロソフィーの理解を確認する
@@ -271,7 +356,7 @@ ACADEMY MENU
 
 <a href="next-stage.html" class="academy-card">
 
-<h3>ブランド選択</h3>
+<h3>STEP4<br>ブランド選択</h3>
 
 <p>
 Kawasaki・Ducati Academyへ進む
@@ -281,7 +366,7 @@ Kawasaki・Ducati Academyへ進む
 
 <a href="phone.html" class="academy-card">
 
-<h3>電話対応</h3>
+<h3>STEP5<br>電話対応</h3>
 
 <p>
 お客様対応の基本を学ぶ
@@ -291,7 +376,7 @@ Kawasaki・Ducati Academyへ進む
 
 <a href="complaint.html" class="academy-card">
 
-<h3>クレーム対応</h3>
+<h3>STEP6<br>クレーム対応</h3>
 
 <p>
 誠意ある対応を学ぶ
@@ -304,4 +389,5 @@ Kawasaki・Ducati Academyへ進む
 </div>
 
 </body>
+
 </html>
