@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -21,14 +22,26 @@ color:#222;
 line-height:1.9;
 }
 
+.home-header{
+padding:20px;
+background:#111;
+}
+
+.home-header a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+}
+
 .hero{
 
-height:100vh;
+height:90vh;
 
 background:
 linear-gradient(
-rgba(0,0,0,.35),
-rgba(0,0,0,.55)
+rgba(0,0,0,.45),
+rgba(0,0,0,.65)
 ),
 url("philosophy-hero.jpg");
 
@@ -56,7 +69,7 @@ margin-bottom:20px;
 .hero p{
 
 font-size:24px;
-max-width:800px;
+max-width:900px;
 
 }
 
@@ -86,7 +99,7 @@ display:block;
 width:80px;
 height:4px;
 
-background:#6DB33F;
+background:#1F3A5F;
 
 margin-top:15px;
 
@@ -94,9 +107,9 @@ margin-top:15px;
 
 .lead{
 
-font-size:20px;
+font-size:22px;
 color:#555;
-max-width:900px;
+max-width:1000px;
 
 }
 
@@ -132,6 +145,8 @@ font-size:28px;
 
 margin-bottom:15px;
 
+color:#1F3A5F;
+
 }
 
 .card p{
@@ -140,41 +155,257 @@ color:#666;
 
 }
 
-.philosophy-grid{
+</style>
 
-display:grid;
+</head>
 
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
+<body>
 
-gap:25px;
+<header class="home-header">
 
-margin-top:50px;
+<a href="welcome.html">
 
-}
+🏠 HOME
 
-.philosophy-item{
+</a>
 
-background:#fff;
+</header>
 
-padding:40px;
+<section class="hero">
 
-border-radius:20px;
+<div>
 
-border-top:5px solid #6DB33F;
+<h1>四方良し</h1>
 
-box-shadow:
-0 8px 25px rgba(0,0,0,.05);
+<p>
 
-}
+お客様と地域に愛され、
+全社員の幸せを恒久的に実現する
 
-.philosophy-item h3{
+</p>
 
-font-size:28px;
+</div>
 
-margin-bottom:15px;
+</section>
 
-}
+<section class="section">
+
+<h2 class="title">
+企業理念
+</h2>
+
+<p class="lead">
+
+パドックグループは、
+お客様と地域に愛され、
+全社員の幸せを恒久的に実現することを理念としています。
+
+私たちは、
+お客様・社員・地域社会・未来のすべてが幸せになることを目指し、
+「四方良し」の考え方を大切にしています。
+
+</p>
+
+<div class="card-grid">
+
+<div class="card">
+
+<h3>売り手よし</h3>
+
+<p>
+
+社員一人ひとりが誇りを持ち、
+成長し続けられる環境をつくる。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>買い手よし</h3>
+
+<p>
+
+お客様に感動と価値を提供し、
+期待を超える体験を届ける。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>世間よし</h3>
+
+<p>
+
+地域社会に必要とされる企業として、
+社会へ貢献し続ける。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>未来よし</h3>
+
+<p>
+
+未来のお客様に喜んでいただき、
+社員やその家族にとって魅力ある会社であり続ける。
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="title">
+企業ビジョン
+</h2>
+
+<p class="lead">
+
+私たちはモーターサイクルを販売する会社ではありません。
+
+お客様の人生を豊かにし、
+社員が自己実現できる舞台をつくり、
+地域社会に必要とされる企業を目指しています。
+
+</p>
+
+<div class="card-grid">
+
+<div class="card">
+
+<h3>対お客様</h3>
+
+<p>
+
+まだ見ていない未来を提案してくれる
+プロフェッショナルであること。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>対社員</h3>
+
+<p>
+
+物心共に満たされる機会を提供してくれる
+舞台であること。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>対社会</h3>
+
+<p>
+
+静岡にパドックがあって良かったと
+言われる会社であること。
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+4つのフィロソフィー
+</h2>
+
+<p class="lead">
+
+私たちは日々の行動の中で、
+4つのフィロソフィーを大切にしています。
+
+</p>
+
+<div class="card-grid">
+
+<div class="card">
+
+<h3>挑戦</h3>
+
+<p>
+
+できるかどうかではなく、
+どうしたらできるかを考える。
+
+挑戦なくして成長はありません。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>達成</h3>
+
+<p>
+
+決めたことを最後までやり切る。
+
+途中で諦めず、
+結果にこだわります。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>誠意</h3>
+
+<p>
+
+約束を守り、
+相手の立場で考える。
+
+信頼は誠意から生まれます。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>スペシャリティ</h3>
+
+<p>
+
+学び続け、
+プロフェッショナルを目指す。
+
+専門性がお客様の価値になります。
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
 
 .story{
 
@@ -195,265 +426,73 @@ margin-top:50px;
 
 margin-bottom:20px;
 
-}
+font-size:20px;
 
-.values{
-
-background:#111;
-
-color:white;
-
-padding:100px 30px;
-
-margin-top:50px;
-
-}
-
-.values h2{
-
-text-align:center;
-
-font-size:42px;
-
-margin-bottom:50px;
-
-}
-
-.values ul{
-
-max-width:800px;
-
-margin:auto;
-
-list-style:none;
-
-}
-
-.values li{
-
-padding:20px 0;
-
-border-bottom:
-1px solid rgba(255,255,255,.1);
-
-font-size:22px;
-
-}
-
-.next{
-
-padding:120px 30px;
-
-text-align:center;
-
-}
-
-.next a{
-
-display:inline-block;
-
-padding:20px 50px;
-
-background:#6DB33F;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:50px;
-
-font-size:18px;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-.next a:hover{
-
-transform:translateY(-3px);
-
-}
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:52px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-.title{
-
-font-size:32px;
-
-}
+line-height:2;
 
 }
 
 </style>
 
-</head>
-
-<body>
-
-<section class="hero">
-
-<div>
-
-<h1>四方良し</h1>
-
-<p>
-
-お客様と地域に愛され、
-全社員の幸せを恒久的に実現する。
-
-</p>
-
-</div>
-
-</section>
 
 <section class="section">
 
 <h2 class="title">
-モーターサイクルの価値
-</h2>
-
-<p class="lead">
-
-モーターサイクルは単なる移動手段ではありません。
-
-自分で行き先を決め、
-自分で走り、
-自分で景色を見つける。
-
-人生を豊かにする特別な存在です。
-
-私たちはその感動を一人でも多くのお客様へ届けたいと考えています。
-
-</p>
-
-</section>
-
-<section class="section">
-
-<h2 class="title">
-四方良し
-</h2>
-
-<div class="card-grid">
-
-<div class="card">
-<h3>売り手よし</h3>
-<p>
-社員一人ひとりが誇りを持ち、
-成長し続けられる環境をつくる。
-</p>
-</div>
-
-<div class="card">
-<h3>買い手よし</h3>
-<p>
-お客様に感動と価値を提供し、
-期待を超える体験を届ける。
-</p>
-</div>
-
-<div class="card">
-<h3>世間よし</h3>
-<p>
-地域社会に必要とされる企業として
-貢献し続ける。
-</p>
-</div>
-
-<div class="card">
-<h3>未来よし</h3>
-<p>
-未来へ価値を繋ぎ、
-次世代へ誇れる企業をつくる。
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="title">
-4つのフィロソフィー
-</h2>
-
-<div class="philosophy-grid">
-
-<div class="philosophy-item">
-<h3>挑戦</h3>
-<p>
-できるかではなく、
-どうしたらできるかを考える。
-</p>
-</div>
-
-<div class="philosophy-item">
-<h3>達成</h3>
-<p>
-決めたことを最後までやり切る。
-</p>
-</div>
-
-<div class="philosophy-item">
-<h3>誠意</h3>
-<p>
-約束を守り、
-誠実に行動する。
-</p>
-</div>
-
-<div class="philosophy-item">
-<h3>スペシャリティ</h3>
-<p>
-学び続け、
-プロフェッショナルを目指す。
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="title">
-創業ストーリー
+創業の歴史・精神
 </h2>
 
 <div class="story">
 
 <p>
 
-「愚痴をこぼすくらいなら、自分でやってみたらどうだ。」
+創業者である飯塚修は、
+かつて一人のスタッフとして
+モーターサイクルショップに勤めていました。
+
+しかし当時は、
+
+「もっとこうした方が良いのに」
+
+「なぜやらないのだろう」
+
+という不満を抱きながら働いていました。
 
 </p>
 
 <p>
 
-その言葉からパドックグループの挑戦は始まりました。
+そんなある日、
+常連のお客様から言われた一言があります。
 
-理想の店をつくりたい。
+</p>
 
-もっとお客様に喜んでもらいたい。
+<p style="font-size:34px;font-weight:bold;text-align:center;color:#1F3A5F;margin:50px 0;">
 
-そんな想いを持った挑戦が、
-今のパドックグループへと繋がっています。
+「愚痴をこぼすくらいなら、
+自分でやってみたらどうだ」
+
+</p>
+
+<p>
+
+その言葉は創業者の人生を大きく変えました。
+
+不満を言う側ではなく、
+自ら挑戦する側になる。
+
+理想を語るだけではなく、
+理想を実現するために行動する。
+
+その決意から1985年7月6日、
+パドックは誕生しました。
+
+</p>
+
+<p>
+
+現在のパドックグループが大切にしている
+「挑戦」というフィロソフィーは、
+この創業の原点から生まれています。
 
 </p>
 
@@ -461,38 +500,98 @@ font-size:32px;
 
 </section>
 
-<section class="values">
+<section style="
+background:#111;
+color:white;
+padding:100px 30px;
+margin-top:50px;
+">
 
-<h2>
-パドックで大切にすること
+<div style="
+max-width:1000px;
+margin:auto;
+text-align:center;
+">
+
+<h2 style="
+font-size:42px;
+margin-bottom:40px;
+">
+
+むすびに
+
 </h2>
 
-<ul>
+<p style="
+font-size:22px;
+line-height:2;
+max-width:900px;
+margin:auto;
+">
 
-<li>元気よく挨拶する</li>
+パドックグループは、
+皆さまが自己実現を果たす舞台です。
 
-<li>時間と約束を守る</li>
+<br><br>
 
-<li>報告・連絡・相談を徹底する</li>
+共に挑み、
+共に成長し、
+共に未来を創っていきましょう。
 
-<li>身の回りを整える</li>
+<br><br>
 
-<li>気づく力を持つ</li>
+その先に、
 
-<li>仲間を助ける</li>
+お客様と地域に愛され、
+全社員の幸せを恒久的に実現する。
 
-</ul>
+という企業理念があります。
+
+</p>
+
+</div>
 
 </section>
 
-<section class="next">
+<section style="
+padding:120px 30px;
+text-align:center;
+">
 
-<h2 style="margin-bottom:30px;">
+<h2 style="
+font-size:38px;
+margin-bottom:30px;
+">
+
 次のステップ
+
 </h2>
 
-<a href="index.html">
-ブランド選択へ進む
+<p style="
+color:#666;
+margin-bottom:40px;
+font-size:18px;
+">
+
+理念を学んだら、
+理解度テストに挑戦しましょう。
+
+</p>
+
+<a href="philosophy-test.html"
+style="
+display:inline-block;
+padding:20px 60px;
+background:#1F3A5F;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-size:20px;
+font-weight:bold;
+">
+
+理解度テストへ進む →
+
 </a>
 
 </section>
