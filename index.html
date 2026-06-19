@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PADOCK GROUP ACADEMY</title>
+<title>PADOCK GROUP ACADEMY LOGIN</title>
+
+<script src="users.js"></script>
 
 <style>
 
@@ -21,13 +22,15 @@ body{
 height:100vh;
 
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
 background:
 linear-gradient(
-rgba(0,0,0,.60),
-rgba(0,0,0,.75)
+rgba(0,0,0,.65),
+rgba(0,0,0,.85)
 ),
 url("paddock-top.jpg");
 
@@ -38,44 +41,31 @@ color:white;
 
 }
 
-.card{
+.login-box{
+
+width:420px;
 
 background:
-rgba(10,15,25,.85);
+rgba(255,255,255,.95);
 
-backdrop-filter:blur(10px);
+padding:40px;
 
-padding:60px;
+border-radius:20px;
 
-border-radius:25px;
-
-width:100%;
-max-width:500px;
-
-text-align:center;
+color:#222;
 
 box-shadow:
-0 15px 40px rgba(0,0,0,.3);
+0 10px 30px rgba(0,0,0,.3);
 
 }
 
 h1{
 
-font-size:40px;
+text-align:center;
 
-letter-spacing:3px;
+margin-bottom:30px;
 
-margin-bottom:20px;
-
-}
-
-.subtitle{
-
-color:#cccccc;
-
-line-height:1.8;
-
-margin-bottom:35px;
+color:#1F3A5F;
 
 }
 
@@ -83,27 +73,15 @@ input{
 
 width:100%;
 
-padding:18px;
+padding:15px;
 
-margin-top:15px;
+margin-bottom:15px;
 
-border:none;
+border:1px solid #ddd;
 
-border-radius:12px;
-
-background:#1d1d1d;
-
-color:white;
+border-radius:10px;
 
 font-size:16px;
-
-}
-
-input:focus{
-
-outline:none;
-
-border:1px solid #1F3A5F;
 
 }
 
@@ -111,17 +89,15 @@ button{
 
 width:100%;
 
-padding:18px;
-
-margin-top:25px;
-
-border:none;
-
-border-radius:12px;
+padding:15px;
 
 background:#1F3A5F;
 
 color:white;
+
+border:none;
+
+border-radius:10px;
 
 font-size:18px;
 
@@ -129,51 +105,15 @@ font-weight:bold;
 
 cursor:pointer;
 
-transition:.3s;
-
 }
 
-button:hover{
+#error{
 
-transform:translateY(-2px);
+color:red;
 
-opacity:.95;
+margin-top:15px;
 
-}
-
-.error{
-
-margin-top:20px;
-
-color:#ff8080;
-
-}
-
-.footer{
-
-margin-top:30px;
-
-font-size:12px;
-
-color:#888;
-
-letter-spacing:2px;
-
-}
-
-@media(max-width:768px){
-
-.card{
-
-padding:40px 25px;
-
-}
-
-h1{
-
-font-size:30px;
-
-}
+text-align:center;
 
 }
 
@@ -183,52 +123,31 @@ font-size:30px;
 
 <body>
 
-<div class="card">
+<div class="login-box">
 
-<h1>PADOCK GROUP ACADEMY</h1>
-
-<p class="subtitle">
-
-Learn. Challenge. Grow.
-
-<br><br>
-
-学び、成長し、<br>
-お客様へ価値を届ける。
-
-</p>
+<h1>PADOCK GROUP<br>ACADEMY</h1>
 
 <input
-id="id"
 type="text"
+id="id"
 placeholder="ID">
 
 <input
-id="pass"
 type="password"
-placeholder="パスワード">
+id="pass"
+placeholder="Password">
 
 <button onclick="login()">
-LOGIN
+
+ログイン
+
 </button>
 
-<div
-id="error"
-class="error">
-</div>
-
-<div class="footer">
-
-PADOCK GROUP
-
-</div>
+<div id="error"></div>
 
 </div>
 
 <script>
-
-const LOGIN_ID = "academy";
-const LOGIN_PASS = "paddock2026";
 
 function login(){
 
@@ -238,17 +157,57 @@ document.getElementById("id").value;
 const pass =
 document.getElementById("pass").value;
 
-if(
-id === LOGIN_ID &&
-pass === LOGIN_PASS
-){
+const user =
+users[id];
 
-location.href = "welcome.html";
+if(!user){
+
+document.getElementById(
+"error"
+).innerHTML =
+
+"IDまたはパスワードが違います";
+
+return;
+
+}
+
+if(user.password !== pass){
+
+document.getElementById(
+"error"
+).innerHTML =
+
+"IDまたはパスワードが違います";
+
+return;
+
+}
+
+localStorage.setItem(
+"currentUser",
+id
+);
+
+localStorage.setItem(
+"currentUserName",
+user.name
+);
+
+localStorage.setItem(
+id + "_lastlogin",
+new Date().toLocaleString()
+);
+
+if(user.role === "admin"){
+
+location.href =
+"admin.html";
 
 }else{
 
-document.getElementById("error").innerText =
-"IDまたはパスワードが違います";
+location.href =
+"welcome.html";
 
 }
 
