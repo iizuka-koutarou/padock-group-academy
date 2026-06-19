@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>共通教育 | PADOCK GROUP ACADEMY</title>
+<title>共通スキル | PADOCK GROUP ACADEMY</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Yu Gothic",sans-serif;}
 body{
@@ -17,6 +17,7 @@ color:white;
 .hero{text-align:center;margin-bottom:60px;}
 .hero h1{font-size:64px;margin-bottom:20px;}
 .hero p{font-size:22px;color:#ddd;line-height:1.8;}
+
 .card{
 background:rgba(255,255,255,.96);
 color:#222;
@@ -25,19 +26,32 @@ border-radius:20px;
 margin-bottom:25px;
 box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
-.card h2{color:#1F3A5F;margin-bottom:15px;}
-.step{
+
+.card h2{
+color:#1F3A5F;
+margin-bottom:15px;
+}
+
+.skill-box{
 padding:20px 0;
 border-bottom:1px solid #ddd;
 }
-.step:last-child{border-bottom:none;}
-.step h3{color:#1F3A5F;margin-bottom:8px;}
-.flow{
-text-align:center;
-font-size:24px;
-font-weight:bold;
-line-height:2.2;
+
+.skill-box:last-child{
+border-bottom:none;
 }
+
+.skill-box h3{
+color:#1F3A5F;
+margin-bottom:10px;
+font-size:24px;
+}
+
+.skill-box p{
+line-height:1.8;
+color:#666;
+}
+
 .quote{
 background:rgba(0,0,0,.65);
 padding:40px;
@@ -47,23 +61,45 @@ font-size:26px;
 font-weight:bold;
 margin:30px 0;
 }
-.btn-area{text-align:center;margin-top:40px;}
-.btn{
-display:inline-block;
-padding:20px 60px;
-background:#1F3A5F;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-size:22px;
-font-weight:bold;
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:30px;
 }
+
+.menu-card{
+background:rgba(255,255,255,.96);
+padding:30px;
+border-radius:20px;
+text-decoration:none;
+color:#222;
+transition:.3s;
+}
+
+.menu-card:hover{
+transform:translateY(-5px);
+border-bottom:5px solid #1F3A5F;
+}
+
+.menu-card h3{
+color:#1F3A5F;
+margin-bottom:10px;
+}
+
+.btn-area{
+text-align:center;
+margin-top:40px;
+}
+
 .back{
 display:inline-block;
-margin-top:25px;
+margin-top:20px;
 color:white;
 text-decoration:none;
 }
+
 @media(max-width:768px){
 .hero h1{font-size:42px;}
 .hero p{font-size:18px;}
@@ -75,61 +111,71 @@ text-decoration:none;
 <div class="container">
 
 <div class="hero">
-<h1>共通教育</h1>
+<h1>共通スキル</h1>
 <p>
-パドックグループで働く上で<br>
-最初に学ぶべき内容です。
+すべてのスタッフに必要な<br>
+社会人としての基本を学びます。
 </p>
 </div>
 
 <div class="card">
-<h2>共通教育とは</h2>
-<p>
-会社の考え方、お客様との向き合い方、働く姿勢を学びます。
-すべての学びの土台となる教育です。
-</p>
-</div>
 
-<div class="card">
 <h2>学習内容</h2>
 
-<div class="step">
-<h3>① 入社初日</h3>
-<p>パドックグループについて学ぶ</p>
+<div class="skill-box">
+<h3>① 社会人として</h3>
+<p>
+挨拶・お辞儀・名刺交換・お出迎え・お見送り・報連相
+</p>
 </div>
 
-<div class="step">
-<h3>② 四方良し</h3>
-<p>企業理念とフィロソフィーを学ぶ</p>
+<div class="skill-box">
+<h3>② 電話対応</h3>
+<p>
+電話応対の基本・保留・取次・折り返し対応
+</p>
 </div>
 
-<div class="step">
-<h3>③ 共通教育試験</h3>
-<p>理解度を確認する</p>
+<div class="skill-box">
+<h3>③ クレーム対応</h3>
+<p>
+期待回復対応・傾聴・謝罪・再発防止
+</p>
 </div>
 
-</div>
-
-<div class="card">
-<h2>学習の流れ</h2>
-<div class="flow">
-入社初日<br>
-↓<br>
-四方良し<br>
-↓<br>
-共通教育試験
-</div>
 </div>
 
 <div class="quote">
-知識の前に考え方。<br>
-すべての学びの土台となる共通教育。
+社会人としての基本が、<br>
+お客様からの信頼につながる。
+</div>
+
+<div class="menu-grid">
+
+<a href="social-basic.html" class="menu-card">
+<h3>社会人として</h3>
+<p>
+信頼される社会人としての基礎を学ぶ
+</p>
+</a>
+
+<a href="phone.html" class="menu-card">
+<h3>電話対応</h3>
+<p>
+電話応対の基本を学ぶ
+</p>
+</a>
+
+<a href="complaint.html" class="menu-card">
+<h3>クレーム対応</h3>
+<p>
+期待回復対応について学ぶ
+</p>
+</a>
+
 </div>
 
 <div class="btn-area">
-<a href="first-day.html" class="btn">
-▶ 入社初日へ進む
-</a><br>
 <a href="welcome.html" class="back">
 ← Academy TOPへ戻る
 </a>
