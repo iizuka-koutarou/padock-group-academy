@@ -54,13 +54,19 @@ font-size:72px;
 margin-bottom:20px;
 }
 
+#user-name{
+margin-top:20px;
+font-size:30px;
+font-weight:bold;
+color:#6CFF6C;
+}
+
 .catch{
 font-size:24px;
 line-height:2;
 color:#ddd;
+margin-top:20px;
 }
-
-/* 認定状況 */
 
 .status-panel{
 max-width:900px;
@@ -98,8 +104,6 @@ font-weight:bold;
 color:#1F3A5F;
 }
 
-/* ロードマップ */
-
 .section-title{
 text-align:center;
 font-size:36px;
@@ -132,8 +136,6 @@ font-weight:bold;
 text-align:center;
 font-size:18px;
 }
-
-/* メニュー */
 
 .menu-grid{
 display:grid;
@@ -174,19 +176,8 @@ color:rgba(255,255,255,.7);
 font-size:14px;
 }
 
-@media(max-width:768px){
-
-.hero h1{
-font-size:48px;
-}
-
-.catch{
-font-size:18px;
-}
-
-}
-
 </style>
+
 </head>
 
 <body>
@@ -201,16 +192,16 @@ PADOCK GROUP
 
 <h1>ACADEMY</h1>
 
-<div class="catch">
+<div id="user-name"></div>
 
+<div class="catch">
 学び、成長し、<br>
 お客様へ価値を届ける。
-
 </div>
 
 </div>
 
-<!-- 試験一覧 -->
+  <!-- 認定状況 -->
 
 <div class="status-panel">
 
@@ -247,9 +238,7 @@ PADOCK GROUP
 </div>
 
 <div class="total-pass" id="total-pass">
-
 0 / 6 合格
-
 </div>
 
 </div>
@@ -261,9 +250,7 @@ PADOCK GROUP
 </h2>
 
 <p class="section-sub">
-
 共通教育 → 共通スキル → ブランド教育 → 職種教育
-
 </p>
 
 <div class="roadmap">
@@ -286,43 +273,31 @@ PADOCK GROUP
 <div class="menu-grid">
 
 <a href="common-education.html" class="menu-card">
-
 <h3>📚 共通教育</h3>
-
 <p>
 入社初日・四方良し・共通教育試験
 </p>
-
 </a>
 
 <a href="common-skill.html" class="menu-card">
-
 <h3>📞 共通スキル</h3>
-
 <p>
-社会人として・電話対応・クレーム対応
+社会人として・挨拶・報連相・電話対応・クレーム対応
 </p>
-
 </a>
 
 <a href="next-stage.html" class="menu-card">
-
 <h3>🏍 ブランド選択</h3>
-
 <p>
 Kawasaki Academy / Ducati Academy
 </p>
-
 </a>
 
-<a href="test-status.html" class="menu-card">
-
-<h3>🏆 試験一覧</h3>
-
+<a href="admin.html" class="menu-card">
+<h3>👨‍💼 管理者ページ</h3>
 <p>
-認定状況を確認する
+社員管理・試験状況確認
 </p>
-
 </a>
 
 </div>
@@ -338,12 +313,38 @@ Learning Never Ends.
 
 <script>
 
+const user =
+localStorage.getItem("currentUser");
+
+const userName =
+localStorage.getItem("currentUserName");
+
 let passCount = 0;
+
+/* 名前表示 */
+
+if(userName){
+
+document.getElementById(
+"user-name"
+).innerHTML =
+
+"ようこそ " +
+userName +
+" さん";
+
+}
+
+/* 試験判定 */
 
 function checkStatus(id,key){
 
+if(!user) return;
+
 const result =
-localStorage.getItem(key);
+localStorage.getItem(
+user + "_" + key
+);
 
 if(result === "pass"){
 
@@ -356,37 +357,17 @@ passCount++;
 
 }
 
-checkStatus(
-"common-status",
-"common-test"
-);
+checkStatus("common-status","common");
+checkStatus("basic-status","basic");
+checkStatus("concierge-status","concierge");
+checkStatus("technician-status","technician");
+checkStatus("ducati-sales-status","ducati_sales");
+checkStatus("ducati-service-status","ducati_service");
 
-checkStatus(
-"basic-status",
-"kawasaki-basic-test"
-);
+document.getElementById(
+"total-pass"
+).innerHTML =
 
-checkStatus(
-"concierge-status",
-"kawasaki-concierge-test"
-);
-
-checkStatus(
-"technician-status",
-"kawasaki-technician-test"
-);
-
-checkStatus(
-"ducati-sales-status",
-"ducati-sales-test"
-);
-
-checkStatus(
-"ducati-service-status",
-"ducati-service-test"
-);
-
-document.getElementById("total-pass").innerHTML =
 passCount + " / 6 合格";
 
 </script>
