@@ -9,18 +9,6 @@
 
 <style>
 
-.home-header{
-padding:20px;
-background:#111;
-}
-
-.home-header a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-font-size:18px;
-}
-
 *{
 margin:0;
 padding:0;
@@ -32,6 +20,19 @@ body{
 background:#050505;
 color:white;
 padding:60px 20px;
+}
+
+.home-header{
+padding:20px;
+background:#111;
+margin:-60px -20px 40px -20px;
+}
+
+.home-header a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
 }
 
 .container{
@@ -49,10 +50,11 @@ text-align:center;
 text-align:center;
 color:#999;
 margin-bottom:60px;
+font-size:18px;
 }
 
 .question{
-background:#161B22;
+background:#111;
 padding:30px;
 border-radius:20px;
 margin-bottom:25px;
@@ -61,6 +63,7 @@ margin-bottom:25px;
 .question h2{
 font-size:22px;
 margin-bottom:20px;
+line-height:1.6;
 }
 
 label{
@@ -86,10 +89,6 @@ border-radius:12px;
 margin-top:40px;
 }
 
-button:hover{
-opacity:.9;
-}
-
 .result{
 margin-top:40px;
 text-align:center;
@@ -98,7 +97,7 @@ font-weight:bold;
 }
 
 .pass{
-color:#1F3A5F;
+color:#7BB4FF;
 }
 
 .fail{
@@ -112,13 +111,7 @@ color:#ff6666;
 <body>
 
 <header class="home-header">
-
-<a href="welcome.html">
-
-🏠 HOME
-
-</a>
-
+<a href="welcome.html">🏠 HOME</a>
 </header>
 
 <div class="container">
@@ -132,62 +125,74 @@ color:#ff6666;
 <form id="quizForm">
 
 <div class="question">
-<h2>Q1. 担当者が不在。お客様から問い合わせが来た。</h2>
-<label><input type="radio" name="q1" value="1">調べて対応する</label>
-<label><input type="radio" name="q1" value="0">明日まで待ってもらう</label>
+<h2>Q1. パドックグループの企業理念は？</h2>
+<label><input type="radio" name="q1" value="0">お客様第一主義</label>
+<label><input type="radio" name="q1" value="1">お客様と地域に愛され、全社員の幸せを恒久的に実現する</label>
+<label><input type="radio" name="q1" value="0">地域社会への貢献</label>
 </div>
 
 <div class="question">
-<h2>Q2. 目標達成が厳しい時は？</h2>
-<label><input type="radio" name="q2" value="1">達成方法を考える</label>
-<label><input type="radio" name="q2" value="0">諦める</label>
+<h2>Q2. 四方良しに含まれないものは？</h2>
+<label><input type="radio" name="q2" value="0">売り手よし</label>
+<label><input type="radio" name="q2" value="0">買い手よし</label>
+<label><input type="radio" name="q2" value="1">世界よし</label>
 </div>
 
 <div class="question">
-<h2>Q3. 新しい仕事を任された。</h2>
-<label><input type="radio" name="q3" value="1">挑戦する</label>
-<label><input type="radio" name="q3" value="0">断る</label>
+<h2>Q3. 「未来よし」とは？</h2>
+<label><input type="radio" name="q3" value="0">来月の売上を上げること</label>
+<label><input type="radio" name="q3" value="1">未来のお客様と社員にとって魅力ある会社であり続けること</label>
+<label><input type="radio" name="q3" value="0">店舗数を増やすこと</label>
 </div>
 
 <div class="question">
-<h2>Q4. 約束時間に遅れそう。</h2>
-<label><input type="radio" name="q4" value="1">事前連絡する</label>
-<label><input type="radio" name="q4" value="0">黙って向かう</label>
-</div>
-<div class="question">
-<h2>Q5. 分からない質問を受けた。</h2>
-<label><input type="radio" name="q5" value="1">調べて回答する</label>
-<label><input type="radio" name="q5" value="0">適当に答える</label>
+<h2>Q4. お客様に対する企業ビジョンは？</h2>
+<label><input type="radio" name="q4" value="1">まだ見ていない未来を提案してくれるプロフェッショナル</label>
+<label><input type="radio" name="q4" value="0">業界最安値を目指す</label>
+<label><input type="radio" name="q4" value="0">全国最大規模を目指す</label>
 </div>
 
 <div class="question">
-<h2>Q6. 改善点を見つけた。</h2>
-<label><input type="radio" name="q6" value="1">提案する</label>
-<label><input type="radio" name="q6" value="0">放置する</label>
+<h2>Q5. 「挑戦」とは？</h2>
+<label><input type="radio" name="q5" value="0">失敗しないこと</label>
+<label><input type="radio" name="q5" value="1">できるかではなく、どうしたらできるかを考えること</label>
+<label><input type="radio" name="q5" value="0">無計画に行動すること</label>
+</div>
+
+
+  <div class="question">
+<h2>Q6. 「達成」とは？</h2>
+<label><input type="radio" name="q6" value="1">決めたことを最後までやり切る</label>
+<label><input type="radio" name="q6" value="0">途中で方向転換する</label>
+<label><input type="radio" name="q6" value="0">他人に任せる</label>
 </div>
 
 <div class="question">
-<h2>Q7. 担当外のお客様が困っている。</h2>
-<label><input type="radio" name="q7" value="1">助ける</label>
-<label><input type="radio" name="q7" value="0">関係ない</label>
+<h2>Q7. 「誠意」とは？</h2>
+<label><input type="radio" name="q7" value="1">約束を守り、相手の立場で考える</label>
+<label><input type="radio" name="q7" value="0">怒られないようにする</label>
+<label><input type="radio" name="q7" value="0">自分を優先する</label>
 </div>
 
 <div class="question">
-<h2>Q8. 目標未達成だった。</h2>
-<label><input type="radio" name="q8" value="1">原因分析する</label>
-<label><input type="radio" name="q8" value="0">言い訳する</label>
+<h2>Q8. 「スペシャリティ」とは？</h2>
+<label><input type="radio" name="q8" value="1">学び続け、プロフェッショナルを目指す</label>
+<label><input type="radio" name="q8" value="0">資格を増やすことだけ</label>
+<label><input type="radio" name="q8" value="0">ベテランになること</label>
 </div>
 
 <div class="question">
-<h2>Q9. 学ぶ理由は？</h2>
-<label><input type="radio" name="q9" value="1">お客様へ価値提供するため</label>
-<label><input type="radio" name="q9" value="0">怒られないため</label>
+<h2>Q9. 創業のきっかけとなった言葉は？</h2>
+<label><input type="radio" name="q9" value="0">継続は力なり</label>
+<label><input type="radio" name="q9" value="1">愚痴をこぼすくらいなら、自分でやってみたらどうだ</label>
+<label><input type="radio" name="q9" value="0">石の上にも三年</label>
 </div>
 
 <div class="question">
-<h2>Q10. 最も大切なのは？</h2>
-<label><input type="radio" name="q10" value="1">フィロソフィーの実践</label>
-<label><input type="radio" name="q10" value="0">現状維持</label>
+<h2>Q10. パドックグループが目指す姿は？</h2>
+<label><input type="radio" name="q10" value="1">お客様と地域に愛され、全社員の幸せを恒久的に実現する</label>
+<label><input type="radio" name="q10" value="0">売上日本一</label>
+<label><input type="radio" name="q10" value="0">店舗数日本一</label>
 </div>
 
 <button type="button" onclick="checkQuiz()">
@@ -231,14 +236,18 @@ result.innerHTML =
 
 <br><br>
 
-次のステージへ進みましょう。
+あなたはパドックグループの理念を理解しています。
+
+<br><br>
+
+次はブランド理解へ進みましょう。
 
 <br><br>
 
 <a href="next-stage.html"
 style="
 display:inline-block;
-padding:15px 30px;
+padding:15px 35px;
 background:#1F3A5F;
 color:white;
 text-decoration:none;
@@ -262,7 +271,7 @@ result.innerHTML =
 
 <br><br>
 
-もう一度フィロソフィーを読み返しましょう。
+もう一度、企業理念・ビジョン・フィロソフィーを読み返しましょう。
 
 </div>`;
 
