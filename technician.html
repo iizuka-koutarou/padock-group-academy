@@ -1,11 +1,131 @@
+<!-- technician.html -->
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テクニシャンコース | Kawasaki Academy</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
+body{
+background:
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.85)
+),
+url("paddock-top.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+}
+
+.hero{
+padding:120px 20px 80px;
+text-align:center;
+}
+
+.hero h1{
+font-size:68px;
+color:#6CFF6C;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+line-height:1.8;
+color:#ddd;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 30px 80px;
+}
+
+.card{
+background:rgba(255,255,255,.96);
+color:#222;
+padding:35px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.card h2{
+color:#0B8F3C;
+margin-bottom:15px;
+}
+
+.quote{
+background:rgba(11,143,60,.25);
+padding:40px;
+border-radius:20px;
+text-align:center;
+font-size:26px;
+font-weight:bold;
+margin-bottom:25px;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:25px;
+}
+
+.menu-card{
+background:rgba(255,255,255,.96);
+padding:30px;
+border-radius:20px;
+text-decoration:none;
+color:#222;
+transition:.3s;
+}
+
+.menu-card:hover{
+transform:translateY(-5px);
+border-bottom:5px solid #0B8F3C;
+}
+
+.menu-card h3{
+color:#0B8F3C;
+margin-bottom:10px;
+}
+
+.back{
+display:block;
+text-align:center;
+margin-top:30px;
+color:white;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
 <section class="hero">
 
-<h1>テクニシャンとは</h1>
+<h1>テクニシャンコース</h1>
 
 <p>
 
-技術で安心を届ける。
-お客様の命を預かる仕事。
+お客様の安全と安心を守る<br>
+プロフェッショナルを目指す。
 
 </p>
 
@@ -13,22 +133,14 @@
 
 <div class="container">
 
-<div class="section">
+<div class="card">
 
 <h2>テクニシャンとは</h2>
 
 <p>
 
-テクニシャンの仕事は、
-壊れた部品を交換することではありません。
-
-お客様が安心してオートバイを楽しめるように、
-
-点検し、
-整備し、
-安全を守ること。
-
-それがテクニシャンの役割です。
+整備士ではなく、
+お客様の命を預かる仕事です。
 
 </p>
 
@@ -36,266 +148,82 @@
 
 <div class="quote">
 
-オートバイを整備する。
-
-その先にあるのは、
-お客様の笑顔と安全である。
+『直す』だけではない。<br>
+安心を提供する仕事。
 
 </div>
 
-<div class="section">
+<div class="menu-grid">
 
-<h2>テクニシャンの使命</h2>
+<a href="technician-about.html" class="menu-card">
 
-<div class="grid">
-
-<div class="card">
-
-<h3>安全を守る</h3>
+<h3>テクニシャンとは</h3>
 
 <p>
-
-整備不良は重大事故に繋がります。
-
-お客様の命を守る責任があります。
-
+役割と考え方を学ぶ
 </p>
 
-</div>
+</a>
 
-<div class="card">
+<a href="hearing-tech.html" class="menu-card">
 
-<h3>安心を届ける</h3>
+<h3>ヒアリング</h3>
 
 <p>
-
-安心してツーリングへ出掛けられる状態を作ります。
-
+症状の聞き取りを学ぶ
 </p>
 
-</div>
+</a>
 
-<div class="card">
+<a href="inspection.html" class="menu-card">
 
-<h3>技術を磨く</h3>
+<h3>点検作業</h3>
 
 <p>
-
-技術に終わりはありません。
-
-常に学び続けることが必要です。
-
+点検の基本を学ぶ
 </p>
 
-</div>
+</a>
 
-<div class="card">
+<a href="inspection-shaken.html" class="menu-card">
 
-<h3>信頼を積み重ねる</h3>
+<h3>車検整備</h3>
 
 <p>
-
-一つひとつの整備が信頼へ繋がります。
-
+法定点検・車検を学ぶ
 </p>
 
-</div>
+</a>
 
-</div>
+<a href="diagnosis.html" class="menu-card">
 
-</div>
-
-<div class="section">
-
-<h2>パドックが求めるテクニシャン</h2>
+<h3>故障診断</h3>
 
 <p>
-
-私たちは単なる整備士を求めているのではありません。
-
-技術だけでなく、
-
-お客様の話を聞き、
-
-分かりやすく説明し、
-
-困りごとを解決できる
-
-プロフェッショナルを目指します。
-
+原因追究力を身につける
 </p>
 
-</div>
+</a>
 
-<div class="section">
+<a href="takumi-test.html" class="menu-card">
 
-<h2>こんな人が成長する</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>素直な人</h3>
+<h3>匠試験</h3>
 
 <p>
-
-教わったことを実践できる。
-
+認定テクニシャン試験
 </p>
-
-</div>
-
-<div class="card">
-
-<h3>学び続ける人</h3>
-
-<p>
-
-新しい技術へ挑戦できる。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>気付ける人</h3>
-
-<p>
-
-小さな異変を見逃さない。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>責任感がある人</h3>
-
-<p>
-
-最後までやり切る。
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Kawasaki Professional Program 匠</h2>
-
-<p>
-
-カワサキでは、
-
-Kawasaki Professional Program「匠」
-
-という検定制度があります。
-
-匠プログラムは、
-
-技術だけでなく、
-
-販売店業務や法規知識も学び、
-
-お客様へ真なる安全と安心を届ける
-
-プロフェッショナルを育成する制度です。
-
-</p>
-
-</div>
-
-<div class="quote">
-
-技術だけでは足りない。
-
-お客様から信頼されてこそ、
-本物のテクニシャンである。
-
-</div>
-
-<div class="section">
-
-<h2>TECHNICIAN ACADEMY の流れ</h2>
-
-<div class="flow">
-
-<div class="flow-step">
-
-① テクニシャンとは
-
-</div>
-
-<div class="flow-step">
-
-② ヒアリング
-
-</div>
-
-<div class="flow-step">
-
-③ 点検作業
-
-</div>
-
-<div class="flow-step">
-
-④ 車検整備
-
-</div>
-
-<div class="flow-step">
-
-⑤ 故障診断
-
-</div>
-
-<div class="flow-step">
-
-⑥ 匠プログラム
-
-</div>
-
-<div class="flow-step">
-
-⑦ 匠試験
-
-</div>
-
-</div>
-
-</div>
-
-<div class="next">
-
-<a href="tech-hearing.html">
-
-ヒアリングへ進む →
 
 </a>
 
 </div>
 
-<div style="display:flex;justify-content:space-between;margin-top:50px;">
+<a href="kawasaki.html" class="back">
 
-<a href="kawasaki.html">
-
-← Kawasaki Academy
-
-</a>
-
-<a href="index.html">
-
-🏠 HOME
+← Kawasaki Academyへ戻る
 
 </a>
 
 </div>
 
-</div>
+</body>
+</html>
