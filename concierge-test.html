@@ -1,118 +1,217 @@
-<section class="hero">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kawasakiコンシェルジュ認定試験</title>
 
-<h1>コンシェルジュ認定試験</h1>
+<style>
 
-<p>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
 
-学んだ内容を確認しましょう
+body{
+background:
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.85)
+),
+url("paddock-top.jpg");
 
-</p>
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 
-</section>
+color:white;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:80px 25px;
+}
+
+h1{
+text-align:center;
+font-size:60px;
+color:#6CFF6C;
+margin-bottom:20px;
+}
+
+.subtitle{
+text-align:center;
+font-size:22px;
+color:#ddd;
+margin-bottom:50px;
+}
+
+.card{
+background:white;
+color:#222;
+padding:30px;
+border-radius:20px;
+margin-bottom:20px;
+box-shadow:
+0 5px 20px rgba(0,0,0,.15);
+}
+
+.question{
+font-size:22px;
+font-weight:bold;
+margin-bottom:15px;
+color:#0B8F3C;
+}
+
+label{
+display:block;
+padding:8px 0;
+cursor:pointer;
+}
+
+button{
+
+width:100%;
+
+padding:20px;
+
+border:none;
+
+border-radius:15px;
+
+background:#0B8F3C;
+
+color:white;
+
+font-size:22px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+margin-top:20px;
+
+}
+
+#result{
+
+margin-top:40px;
+
+text-align:center;
+
+font-size:30px;
+
+font-weight:bold;
+
+}
+
+.back{
+
+display:block;
+
+text-align:center;
+
+margin-top:30px;
+
+color:white;
+
+text-decoration:none;
+
+}
+
+</style>
+</head>
+
+<body>
 
 <div class="container">
 
-<div class="section">
+<h1>Kawasakiコンシェルジュ認定試験</h1>
 
-<h2>試験について</h2>
+<div class="subtitle">
 
-<p>
-
-全10問です。
-
-8問以上正解で合格となります。
-
-不合格の場合は、もう一度学習してから挑戦してください。
-
-</p>
+10問中8問以上で合格
 
 </div>
 
-<form id="testForm">
+<form id="quiz">
 
-<div class="question">
-
-<h3>Q1. コンシェルジュの役割として最も適切なのは？</h3>
-
-<label><input type="radio" name="q1" value="a"> 車両を販売すること</label><br> <label><input type="radio" name="q1" value="b"> お客様をサポートすること</label><br> <label><input type="radio" name="q1" value="c"> 値引きを行うこと</label>
-
+<div class="card">
+<div class="question">Q1. ヒアリングの目的は？</div>
+<label><input type="radio" name="q1" value="0"> 車両を売ること</label>
+<label><input type="radio" name="q1" value="1"> お客様を理解すること</label>
+<label><input type="radio" name="q1" value="0"> 見積りを作ること</label>
 </div>
 
-<div class="question">
-
-<h3>Q2. ヒアリングで最も大切なことは？</h3>
-
-<label><input type="radio" name="q2" value="a"> すぐ説明する</label><br> <label><input type="radio" name="q2" value="b"> お客様を理解する</label><br> <label><input type="radio" name="q2" value="c"> 契約を急ぐ</label>
-
+<div class="card">
+<div class="question">Q2. 商談で最も大切なことは？</div>
+<label><input type="radio" name="q2" value="0"> 値引き</label>
+<label><input type="radio" name="q2" value="1"> 最適な選択をしていただく</label>
+<label><input type="radio" name="q2" value="0"> 契約を急がせる</label>
 </div>
 
-<div class="question">
-
-<h3>Q3. 商談の目的は？</h3>
-
-<label><input type="radio" name="q3" value="a"> 高額車両を販売する</label><br> <label><input type="radio" name="q3" value="b"> 契約を急ぐ</label><br> <label><input type="radio" name="q3" value="c"> お客様に納得して選んでいただく</label>
-
+<div class="card">
+<div class="question">Q3. コンシェルジュの役割は？</div>
+<label><input type="radio" name="q3" value="1"> バイクライフの提案</label>
+<label><input type="radio" name="q3" value="0"> 販売のみ</label>
+<label><input type="radio" name="q3" value="0"> 車検受付のみ</label>
 </div>
 
-<div class="question">
-
-<h3>Q4. 商談中に避けるべきことは？</h3>
-
-<label><input type="radio" name="q4" value="a"> 比較検討を歓迎する</label><br> <label><input type="radio" name="q4" value="b"> 即決を迫る</label><br> <label><input type="radio" name="q4" value="c"> メリット・デメリットを説明する</label>
-
+<div class="card">
+<div class="question">Q4. 納車とは？</div>
+<label><input type="radio" name="q4" value="0"> ゴール</label>
+<label><input type="radio" name="q4" value="1"> スタート</label>
+<label><input type="radio" name="q4" value="0"> 引渡し作業</label>
 </div>
 
-<div class="question">
-
-<h3>Q5. 納車は何を意味する？</h3>
-
-<label><input type="radio" name="q5" value="a"> ゴール</label><br> <label><input type="radio" name="q5" value="b"> スタート</label>
-
+<div class="card">
+<div class="question">Q5. アフターフォローの目的は？</div>
+<label><input type="radio" name="q5" value="0"> 次の販売だけ</label>
+<label><input type="radio" name="q5" value="1"> 信頼関係の継続</label>
+<label><input type="radio" name="q5" value="0"> 点検案内だけ</label>
 </div>
 
-<div class="question">
-
-<h3>Q6. 納車時に必要なことは？</h3>
-
-<label><input type="radio" name="q6" value="a"> 説明を急ぐ</label><br> <label><input type="radio" name="q6" value="b"> お客様のペースで説明する</label>
-
+<div class="card">
+<div class="question">Q6. FAQ対応で大切なことは？</div>
+<label><input type="radio" name="q6" value="0"> すぐ答える</label>
+<label><input type="radio" name="q6" value="1"> 不安を解消する</label>
+<label><input type="radio" name="q6" value="0"> カタログを見せる</label>
 </div>
 
-<div class="question">
-
-<h3>Q7. アフターフォローの目的は？</h3>
-
-<label><input type="radio" name="q7" value="a"> 納車後は関係ない</label><br> <label><input type="radio" name="q7" value="b"> 長く安心して乗っていただく</label>
-
+<div class="card">
+<div class="question">Q7. お客様の話はどうする？</div>
+<label><input type="radio" name="q7" value="1"> 最後まで聞く</label>
+<label><input type="radio" name="q7" value="0"> 途中で提案する</label>
+<label><input type="radio" name="q7" value="0"> スペック説明を優先する</label>
 </div>
 
-<div class="question">
-
-<h3>Q8. FAQ対応で大切なことは？</h3>
-
-<label><input type="radio" name="q8" value="a"> 分からなくても答える</label><br> <label><input type="radio" name="q8" value="b"> 確認して正確に回答する</label>
-
+<div class="card">
+<div class="question">Q8. 納車時に大切なことは？</div>
+<label><input type="radio" name="q8" value="1"> 納車体験を提供する</label>
+<label><input type="radio" name="q8" value="0"> 書類だけ渡す</label>
+<label><input type="radio" name="q8" value="0"> 写真は不要</label>
 </div>
 
-<div class="question">
-
-<h3>Q9. 免許取得中のお客様は購入できる？</h3>
-
-<label><input type="radio" name="q9" value="a"> できる</label><br> <label><input type="radio" name="q9" value="b"> できない</label>
-
+<div class="card">
+<div class="question">Q9. パドックが目指す姿は？</div>
+<label><input type="radio" name="q9" value="1"> バイクライフの提供</label>
+<label><input type="radio" name="q9" value="0"> 販売台数No.1</label>
+<label><input type="radio" name="q9" value="0"> 値引きNo.1</label>
 </div>
 
-<div class="question">
-
-<h3>Q10. パドックが目指す姿は？</h3>
-
-<label><input type="radio" name="q10" value="a"> 困ったら相談できるお店</label><br> <label><input type="radio" name="q10" value="b"> 車両を販売するだけのお店</label>
-
+<div class="card">
+<div class="question">Q10. 信頼は何から生まれる？</div>
+<label><input type="radio" name="q10" value="0"> 値引き</label>
+<label><input type="radio" name="q10" value="1"> 小さな約束の積み重ね</label>
+<label><input type="radio" name="q10" value="0"> 広告</label>
 </div>
 
 <button type="button" onclick="checkTest()">
 
-採点する
+試験結果を見る
 
 </button>
 
@@ -120,35 +219,30 @@
 
 <div id="result"></div>
 
+<a href="concierge.html" class="back">
+
+← コンシェルジュコースへ戻る
+
+</a>
+
+</div>
+
 <script>
 
 function checkTest(){
 
 let score = 0;
 
-const answers = {
+for(let i=1;i<=10;i++){
 
-q1:"b",
-q2:"b",
-q3:"c",
-q4:"b",
-q5:"b",
-q6:"b",
-q7:"b",
-q8:"b",
-q9:"a",
-q10:"a"
+let ans =
+document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
 
-};
+if(ans){
 
-for(let key in answers){
-
-const selected =
-document.querySelector(`input[name="${key}"]:checked`);
-
-if(selected && selected.value === answers[key]){
-
-score++;
+score += Number(ans.value);
 
 }
 
@@ -159,17 +253,18 @@ document.getElementById("result");
 
 if(score >= 8){
 
+localStorage.setItem(
+"kawasaki-concierge-test",
+"pass"
+);
+
 result.innerHTML =
-"<h2>🎉 合格！</h2><p>" +
-score +
-"/10 点です。コンシェルジュ認定試験に合格しました。</p>";
+"✅ 合格！<br>" + score + " / 10";
 
 }else{
 
 result.innerHTML =
-"<h2>再挑戦</h2><p>" +
-score +
-"/10 点です。もう一度学習してから挑戦しましょう。</p>";
+"❌ 不合格<br>" + score + " / 10";
 
 }
 
@@ -177,20 +272,5 @@ score +
 
 </script>
 
-<div style="display:flex;justify-content:space-between;margin-top:50px;">
-
-<a href="faq.html">
-
-← FAQ
-
-</a>
-
-<a href="kawasaki.html">
-
-🏠 KAWASAKI ACADEMY
-
-</a>
-
-</div>
-
-</div>
+</body>
+</html>
