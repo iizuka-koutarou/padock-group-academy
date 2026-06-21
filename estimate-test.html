@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -137,7 +138,7 @@ font-size:18px;
 <div class="question">Q2. 見積作成前に必ず確認するものは？</div>
 <label><input type="radio" name="q2" value="1"> 来店アンケート</label>
 <label><input type="radio" name="q2" value="0"> SNS</label>
-<label><input type="radio" name="q2" value="0"> 在庫表だけ</label>
+<label><input type="radio" name="q2" value="0"> 天気予報</label>
 </div>
 
 <div class="card">
@@ -155,45 +156,45 @@ font-size:18px;
 </div>
 
 <div class="card">
-<div class="question">Q5. 見積作成時に重要なことは？</div>
-<label><input type="radio" name="q5" value="1"> お客様の要望を詳しく聞く</label>
-<label><input type="radio" name="q5" value="0"> 金額だけ説明する</label>
-<label><input type="radio" name="q5" value="0"> 契約だけ急ぐ</label>
+<div class="question">Q5. ヒアリングする内容として正しいものは？</div>
+<label><input type="radio" name="q5" value="1"> 使用目的・予算・購入時期</label>
+<label><input type="radio" name="q5" value="0"> 名前だけ</label>
+<label><input type="radio" name="q5" value="0"> 住所だけ</label>
 </div>
 
 <div class="card">
-<div class="question">Q6. 必ず説明するオーナーサポートは？</div>
-<label><input type="radio" name="q6" value="1"> カワサキケア・メンテナンスパック・ロードサービス・延長保証</label>
-<label><input type="radio" name="q6" value="0"> 任意保険のみ</label>
-<label><input type="radio" name="q6" value="0"> 特に説明しない</label>
+<div class="question">Q6. 見積時に必ず説明するものは？</div>
+<label><input type="radio" name="q6" value="1"> オーナーサポート</label>
+<label><input type="radio" name="q6" value="0"> 車検証</label>
+<label><input type="radio" name="q6" value="0"> 任意保険証券</label>
 </div>
 
 <div class="card">
-<div class="question">Q7. 見積完成後に行うことは？</div>
-<label><input type="radio" name="q7" value="1"> Wチェック</label>
-<label><input type="radio" name="q7" value="0"> すぐ渡す</label>
-<label><input type="radio" name="q7" value="0"> LINE送信のみ</label>
+<div class="question">Q7. 現金購入予定のお客様にも提案するものは？</div>
+<label><input type="radio" name="q7" value="1"> ローン</label>
+<label><input type="radio" name="q7" value="0"> カスタムのみ</label>
+<label><input type="radio" name="q7" value="0"> 下取りのみ</label>
 </div>
 
 <div class="card">
-<div class="question">Q8. ローン提案は誰に行いますか？</div>
-<label><input type="radio" name="q8" value="1"> 現金購入予定のお客様にも提案する</label>
-<label><input type="radio" name="q8" value="0"> ローン希望者だけ</label>
-<label><input type="radio" name="q8" value="0"> 提案しない</label>
+<div class="question">Q8. ローン提案のメリットとして正しいものは？</div>
+<label><input type="radio" name="q8" value="1"> 手元資金を残せる</label>
+<label><input type="radio" name="q8" value="0"> 金額が安くなる</label>
+<label><input type="radio" name="q8" value="0"> 車検が不要になる</label>
 </div>
 
 <div class="card">
-<div class="question">Q9. 現金を残しておくメリットは？</div>
-<label><input type="radio" name="q9" value="1"> 自由に活用できる</label>
-<label><input type="radio" name="q9" value="0"> 特にない</label>
-<label><input type="radio" name="q9" value="0"> ローンが組めなくなる</label>
+<div class="question">Q9. 見積完成後に必ず行うことは？</div>
+<label><input type="radio" name="q9" value="1"> Wチェック</label>
+<label><input type="radio" name="q9" value="0"> 即印刷</label>
+<label><input type="radio" name="q9" value="0"> 即契約</label>
 </div>
 
 <div class="card">
 <div class="question">Q10. パドックが考える見積作成とは？</div>
 <label><input type="radio" name="q10" value="1"> 信頼関係を築く時間</label>
-<label><input type="radio" name="q10" value="0"> 金額提示だけの時間</label>
-<label><input type="radio" name="q10" value="0"> 契約だけの時間</label>
+<label><input type="radio" name="q10" value="0"> 値段を伝える時間</label>
+<label><input type="radio" name="q10" value="0"> 契約を急ぐ時間</label>
 </div>
 
 <button type="button" onclick="checkTest()">
@@ -222,6 +223,8 @@ font-size:18px;
 
 </div>
 
+<script src="academy.js"></script>
+
 <script>
 
 function checkTest(){
@@ -246,26 +249,22 @@ document.getElementById("result");
 
 if(score >= 8){
 
-const user =
-localStorage.getItem("currentUser");
-
-if(user){
-
-localStorage.setItem(
-user + "_estimate",
-"pass"
-);
-
-}
+completeCourse("estimate");
 
 result.innerHTML =
 
 "✅ 合格！<br>" +
+
 score +
+
 " / 10" +
+
 "<br><br>" +
+
 "見積作成コースを修了しました。" +
+
 "<br><br>" +
+
 '<a href="assessment.html" style="display:inline-block;padding:15px 30px;background:#0B8F3C;color:white;text-decoration:none;border-radius:10px;font-size:20px;font-weight:bold;">▶ 次へ進む（査定）</a>';
 
 }else{
@@ -273,9 +272,13 @@ score +
 result.innerHTML =
 
 "❌ 不合格<br>" +
+
 score +
+
 " / 10" +
+
 "<br><br>" +
+
 "もう一度学習内容を確認しましょう。";
 
 }
