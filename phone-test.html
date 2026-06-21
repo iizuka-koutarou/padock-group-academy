@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -222,6 +223,8 @@ font-size:18px;
 
 </div>
 
+<script src="academy.js"></script>
+
 <script>
 
 function checkTest(){
@@ -246,17 +249,7 @@ document.getElementById("result");
 
 if(score >= 8){
 
-const user =
-localStorage.getItem("currentUser");
-
-if(user){
-
-localStorage.setItem(
-user + "_phone",
-"pass"
-);
-
-}
+completeCourse("phone");
 
 result.innerHTML =
 
