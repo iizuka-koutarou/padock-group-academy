@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -222,6 +223,8 @@ font-size:18px;
 
 </div>
 
+<script src="academy.js"></script>
+
 <script>
 
 function checkTest(){
@@ -246,26 +249,22 @@ document.getElementById("result");
 
 if(score >= 8){
 
-const user =
-localStorage.getItem("currentUser");
-
-if(user){
-
-localStorage.setItem(
-user + "_questionnaire",
-"pass"
-);
-
-}
+completeCourse("questionnaire");
 
 result.innerHTML =
 
 "✅ 合格！<br>" +
+
 score +
+
 " / 10" +
+
 "<br><br>" +
+
 "来店アンケートコースを修了しました。" +
+
 "<br><br>" +
+
 '<a href="welcome-drink.html" style="display:inline-block;padding:15px 30px;background:#0B8F3C;color:white;text-decoration:none;border-radius:10px;font-size:20px;font-weight:bold;">▶ 次へ進む（ウェルカムドリンク）</a>';
 
 }else{
@@ -273,9 +272,13 @@ score +
 result.innerHTML =
 
 "❌ 不合格<br>" +
+
 score +
+
 " / 10" +
+
 "<br><br>" +
+
 "もう一度学習内容を確認しましょう。";
 
 }
