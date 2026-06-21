@@ -178,6 +178,15 @@ text-decoration:none;
 
 <h1>PADOCK ACADEMY</h1>
 
+<div id="welcomeUser"
+style="
+text-align:center;
+font-size:24px;
+margin-bottom:15px;
+color:#6CFF6C;
+">
+</div>
+
 <div class="subtitle">
 
 コンシェルジュ育成プログラム
@@ -389,6 +398,17 @@ text-decoration:none;
 const user =
 localStorage.getItem("currentUser");
 
+const userName =
+localStorage.getItem("currentUserName");
+
+document.getElementById(
+"welcomeUser"
+).innerHTML =
+
+"ようこそ " +
+userName +
+" さん";
+
 const items = [
 
 ["appearance","appearanceStatus"],
@@ -454,5 +474,7 @@ document.querySelector(".progress-card").innerHTML +=
 
 </script>
 
+<script src="academy.js"></script>
+  
 </body>
 </html>
