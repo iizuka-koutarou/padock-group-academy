@@ -3,7 +3,10 @@
 // 共通管理ファイル
 // =====================
 
-// 現在ログイン中のユーザー取得
+const GAS_URL =
+"https://script.google.com/macros/s/AKfycbyOKtpW7f_8-Hm2AIRDtS51T6n5jU-3Il18KBCnVGhV8SdwpaWttUDTinAgnAbyhCYr/exec";
+
+// 現在ログイン中ユーザー
 
 function getCurrentUser(){
 
@@ -15,7 +18,11 @@ return localStorage.getItem("currentUser");
 
 function completeCourse(course){
 
-const user = getCurrentUser();
+const user =
+localStorage.getItem("currentUser");
+
+const name =
+localStorage.getItem("currentUserName");
 
 if(!user){
 
@@ -25,10 +32,46 @@ return;
 
 }
 
+// ローカル保存
+
 localStorage.setItem(
 user + "_" + course,
 "pass"
 );
+
+// Googleシート保存
+
+fetch(
+GAS_URL,
+{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+userId:user,
+name:name,
+course:course
+})
+}
+)
+.then(response=>response.text())
+.then(data=>{
+
+console.log(
+"Google保存成功",
+data
+);
+
+})
+.catch(error=>{
+
+console.error(
+"Google保存失敗",
+error
+);
+
+});
 
 }
 
@@ -36,7 +79,8 @@ user + "_" + course,
 
 function isCompleted(course){
 
-const user = getCurrentUser();
+const user =
+getCurrentUser();
 
 if(!user){
 
