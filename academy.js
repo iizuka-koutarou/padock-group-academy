@@ -45,8 +45,9 @@ fetch(
 GAS_URL,
 {
 method:"POST",
+mode:"no-cors",
 headers:{
-"Content-Type":"application/json"
+"Content-Type":"text/plain"
 },
 body:JSON.stringify({
 userId:user,
@@ -55,18 +56,17 @@ course:course
 })
 }
 )
-.then(response=>response.text())
-.then(data=>{
+.then(()=>{
 
-alert(data);
+console.log("送信成功");
 
 })
 .catch(error=>{
 
-alert(error);
+console.error(error);
 
 });
-
+  
 }
 
 // 修了確認
