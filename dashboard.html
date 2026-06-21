@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -47,6 +48,15 @@ font-size:60px;
 text-align:center;
 color:#6CFF6C;
 margin-bottom:10px;
+
+}
+
+#welcomeUser{
+
+text-align:center;
+font-size:24px;
+margin-bottom:15px;
+color:#6CFF6C;
 
 }
 
@@ -169,7 +179,22 @@ text-decoration:none;
 
 }
 
+.certificate-btn{
+
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#0B8F3C;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-size:20px;
+font-weight:bold;
+
+}
+
 </style>
+
 </head>
 
 <body>
@@ -178,14 +203,7 @@ text-decoration:none;
 
 <h1>PADOCK ACADEMY</h1>
 
-<div id="welcomeUser"
-style="
-text-align:center;
-font-size:24px;
-margin-bottom:15px;
-color:#6CFF6C;
-">
-</div>
+<div id="welcomeUser"></div>
 
 <div class="subtitle">
 
@@ -207,176 +225,82 @@ color:#6CFF6C;
 
 </div>
 
+<div id="certificateArea"></div>
+
 </div>
 
 <div class="grid">
 
 <div class="card">
-
 <h3>① 身だしなみ</h3>
-
 <div id="appearanceStatus" class="status"></div>
-
-<a href="appearance.html">
-
-学習する
-
-</a>
-
+<a href="appearance.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>② 電話対応</h3>
-
 <div id="phoneStatus" class="status"></div>
-
-<a href="phone.html">
-
-学習する
-
-</a>
-
+<a href="phone.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>③ 店舗清掃</h3>
-
 <div id="cleaningStatus" class="status"></div>
-
-<a href="cleaning.html">
-
-学習する
-
-</a>
-
+<a href="cleaning.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>④ 来店客把握</h3>
-
 <div id="customerStatus" class="status"></div>
-
-<a href="customer-check.html">
-
-学習する
-
-</a>
-
+<a href="customer-check.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>⑤ 来店目的ヒアリング</h3>
-
 <div id="hearingStatus" class="status"></div>
-
-<a href="hearing.html">
-
-学習する
-
-</a>
-
+<a href="hearing.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>⑥ 来店アンケート</h3>
-
 <div id="questionnaireStatus" class="status"></div>
-
-<a href="questionnaire.html">
-
-学習する
-
-</a>
-
+<a href="questionnaire.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>⑦ ウェルカムドリンク</h3>
-
 <div id="drinkStatus" class="status"></div>
-
-<a href="welcome-drink.html">
-
-学習する
-
-</a>
-
+<a href="welcome-drink.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>⑧ 見積作成</h3>
-
 <div id="estimateStatus" class="status"></div>
-
-<a href="estimate.html">
-
-学習する
-
-</a>
-
+<a href="estimate.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>⑨ 査定</h3>
-
 <div id="assessmentStatus" class="status"></div>
-
-<a href="assessment.html">
-
-学習する
-
-</a>
-
+<a href="assessment.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>⑩ 契約</h3>
-
 <div id="contractStatus" class="status"></div>
-
-<a href="contract.html">
-
-学習する
-
-</a>
-
+<a href="contract.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>⑪ 納車</h3>
-
 <div id="deliveryStatus" class="status"></div>
-
-<a href="delivery.html">
-
-学習する
-
-</a>
-
+<a href="delivery.html">学習する</a>
 </div>
 
 <div class="card">
-
 <h3>⑫ アフターフォロー</h3>
-
 <div id="afterStatus" class="status"></div>
-
-<a href="after-follow.html">
-
-学習する
-
-</a>
-
+<a href="after-follow.html">学習する</a>
 </div>
 
 </div>
@@ -393,21 +317,15 @@ color:#6CFF6C;
 
 </div>
 
-<script>
+<script src="academy.js"></script>
 
-const user =
-localStorage.getItem("currentUser");
+<script>
 
 const userName =
 localStorage.getItem("currentUserName");
 
-document.getElementById(
-"welcomeUser"
-).innerHTML =
-
-"ようこそ " +
-userName +
-" さん";
+document.getElementById("welcomeUser").innerHTML =
+"ようこそ " + userName + " さん";
 
 const items = [
 
@@ -426,55 +344,37 @@ const items = [
 
 ];
 
-let complete = 0;
-
 items.forEach(item=>{
-
-const key =
-user + "_" + item[0];
 
 const target =
 document.getElementById(item[1]);
 
-if(localStorage.getItem(key) === "pass"){
+if(isCompleted(item[0])){
 
-target.innerHTML =
-"✅ 修了";
-
+target.innerHTML = "✅ 修了";
 target.classList.add("complete");
-
-complete++;
 
 }else{
 
-target.innerHTML =
-"🔒 未修了";
-
+target.innerHTML = "🔒 未修了";
 target.classList.add("lock");
 
 }
 
 });
 
-const percent =
-Math.round(
-(complete / items.length) * 100
-);
-
 document.getElementById("percent").innerHTML =
-percent + "%";
+getProgress() + "%";
 
-if(percent === 100){
+if(isAcademyCompleted()){
 
-document.querySelector(".progress-card").innerHTML +=
+document.getElementById("certificateArea").innerHTML =
 
-'<br><a href="concierge-complete.html" style="padding:15px 30px;background:#0B8F3C;color:white;text-decoration:none;border-radius:10px;font-size:20px;">🏆 修了証を見る</a>';
+'<a href="concierge-complete.html" class="certificate-btn">🏆 修了証を見る</a>';
 
 }
 
 </script>
 
-<script src="academy.js"></script>
-  
 </body>
 </html>
