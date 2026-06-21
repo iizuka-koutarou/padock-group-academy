@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PADOCK ACADEMY</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(
+rgba(0,0,0,.7),
+rgba(0,0,0,.9)
+),
+url("paddock-top.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+min-height:100vh;
+
+}
+
+.container{
+
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+
+}
+
+h1{
+
+font-size:60px;
+text-align:center;
+color:#6CFF6C;
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+text-align:center;
+font-size:20px;
+color:#ddd;
+margin-bottom:40px;
+
+}
+
+.progress-card{
+
+background:white;
+color:#222;
+
+padding:40px;
+
+border-radius:20px;
+
+margin-bottom:40px;
+
+text-align:center;
+
+}
+
+.progress-number{
+
+font-size:70px;
+font-weight:bold;
+color:#0B8F3C;
+
+}
+
+.progress-text{
+
+font-size:22px;
+margin-top:10px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+
+}
+
+.card{
+
+background:white;
+color:#222;
+
+padding:25px;
+
+border-radius:20px;
+
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.card h3{
+
+color:#0B8F3C;
+margin-bottom:15px;
+
+}
+
+.status{
+
+font-size:20px;
+font-weight:bold;
+margin-top:15px;
+
+}
+
+.complete{
+
+color:#0B8F3C;
+
+}
+
+.lock{
+
+color:#999;
+
+}
+
+.card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 25px;
+
+background:#0B8F3C;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:10px;
+
+}
+
+.footer{
+
+text-align:center;
+margin-top:50px;
+
+}
+
+.footer a{
+
+color:white;
+text-decoration:none;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>PADOCK ACADEMY</h1>
+
+<div class="subtitle">
+
+コンシェルジュ育成プログラム
+
+</div>
+
+<div class="progress-card">
+
+<div class="progress-number" id="percent">
+
+0%
+
+</div>
+
+<div class="progress-text">
+
+コンシェルジュ達成率
+
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>① 身だしなみ</h3>
+
+<div id="appearanceStatus" class="status"></div>
+
+<a href="appearance.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>② 電話対応</h3>
+
+<div id="phoneStatus" class="status"></div>
+
+<a href="phone.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>③ 店舗清掃</h3>
+
+<div id="cleaningStatus" class="status"></div>
+
+<a href="cleaning.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>④ 来店客把握</h3>
+
+<div id="customerStatus" class="status"></div>
+
+<a href="customer-check.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⑤ 来店目的ヒアリング</h3>
+
+<div id="hearingStatus" class="status"></div>
+
+<a href="hearing.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⑥ 来店アンケート</h3>
+
+<div id="questionnaireStatus" class="status"></div>
+
+<a href="questionnaire.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⑦ ウェルカムドリンク</h3>
+
+<div id="drinkStatus" class="status"></div>
+
+<a href="welcome-drink.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⑧ 見積作成</h3>
+
+<div id="estimateStatus" class="status"></div>
+
+<a href="estimate.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⑨ 査定</h3>
+
+<div id="assessmentStatus" class="status"></div>
+
+<a href="assessment.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⑩ 契約</h3>
+
+<div id="contractStatus" class="status"></div>
+
+<a href="contract.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⑪ 納車</h3>
+
+<div id="deliveryStatus" class="status"></div>
+
+<a href="delivery.html">
+
+学習する
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⑫ アフターフォロー</h3>
+
+<div id="afterStatus" class="status"></div>
+
+<a href="after-follow.html">
+
+学習する
+
+</a>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+<a href="welcome.html">
+
+🏠 TOPへ戻る
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+const user =
+localStorage.getItem("currentUser");
+
+const items = [
+
+["appearance","appearanceStatus"],
+["phone","phoneStatus"],
+["cleaning","cleaningStatus"],
+["customer_check","customerStatus"],
+["hearing","hearingStatus"],
+["questionnaire","questionnaireStatus"],
+["welcome_drink","drinkStatus"],
+["estimate","estimateStatus"],
+["assessment","assessmentStatus"],
+["contract","contractStatus"],
+["delivery","deliveryStatus"],
+["after_follow","afterStatus"]
+
+];
+
+let complete = 0;
+
+items.forEach(item=>{
+
+const key =
+user + "_" + item[0];
+
+const target =
+document.getElementById(item[1]);
+
+if(localStorage.getItem(key) === "pass"){
+
+target.innerHTML =
+"✅ 修了";
+
+target.classList.add("complete");
+
+complete++;
+
+}else{
+
+target.innerHTML =
+"🔒 未修了";
+
+target.classList.add("lock");
+
+}
+
+});
+
+const percent =
+Math.round(
+(complete / items.length) * 100
+);
+
+document.getElementById("percent").innerHTML =
+percent + "%";
+
+if(percent === 100){
+
+document.querySelector(".progress-card").innerHTML +=
+
+'<br><a href="concierge-complete.html" style="padding:15px 30px;background:#0B8F3C;color:white;text-decoration:none;border-radius:10px;font-size:20px;">🏆 修了証を見る</a>';
+
+}
+
+</script>
+
+</body>
+</html>
