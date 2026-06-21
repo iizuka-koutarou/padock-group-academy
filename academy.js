@@ -58,18 +58,12 @@ course:course
 .then(response=>response.text())
 .then(data=>{
 
-console.log(
-"Google保存成功",
-data
-);
+alert(data);
 
 })
 .catch(error=>{
 
-console.error(
-"Google保存失敗",
-error
-);
+alert(error);
 
 });
 
